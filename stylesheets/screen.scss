@@ -1,0 +1,104 @@
+
+@import "compass";
+
+/* Basic Styles */
+
+* { margin: 0; padding: 0; }
+body { overflow: hidden; color: #222; font-family: helvetica, arial; line-height: 1.2; } a:active { outline: none;}
+.nextbutton, .backbutton { position: absolute; top: 0; height: 100%; width: 50%; }
+.nextbutton { cursor: url('right.png'), e-resize; right: 0; }
+.backbutton { cursor: url('left.png'), w-resize; left: 0; }
+h1 { text-align: center; padding: 0 50px; margin-top: 150px; font-size: 50px; color: white;}
+img { margin: 0 auto; display: block; margin-top: 50px;}
+footer { z-index: 2; position: fixed; bottom: 60px; left: 50%; width: 600px; margin-left: -300px; text-align: center; }
+footer a.link { color: #111; font-size: 15px; font-weight: bold; text-decoration: none; border-bottom: solid 2px; }
+footer a.link:hover { color: red; }
+
+/* The Basic Style for all Pages */
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+$page1-top: #0e497e;
+$page1-bottom: darken($page1-top, 20%);
+
+/* The Pages */
+
+#i1 {
+  top: 100%;
+  background: #fff url("http://subtlepatterns.com/patterns/type.png"); }
+#i2 {
+  top: 200%;
+  background: #bbb url("http://www.emuzikos.com/images/backgrounds/bg-footer.gif"); }
+#i3 {
+  top: 300%;
+  background: #777 url("http://subtlepatterns.com/patterns/type.png");; }
+
+
+/* The Transition Effect */
+
+.page {
+  -webkit-transition: -webkit-transform 0.8s;
+  -moz-transition: -moz-transform 0.8s;
+  -o-transition: -o-transform 0.8s;
+}
+
+/* The Sliding Action */
+/* TranslateX for better Performance. Translate3D for better Performance on Ipad. */
+
+#a1:target .page {
+  @include translateY(-100%); }
+#a2:target .page {
+  @include translateY(-200%); }
+#a3:target .page {
+  @include translateY(-300%); }
+
+
+/* The First Page - Initial Positioning without Anchor */
+
+.page {
+  @include translateY(-100%);
+}
+
+
+/* Top Navigation.  */
+
+table {
+  display: table;
+  width: 100%;
+  cellspacing: 0;
+  border-collapse: collapse;
+  position: fixed;
+  z-index: 5000;
+  top: -1px;
+  left: 0;
+  right: 0;
+
+  a {
+    line-height: 54px;
+    font-family: helvetica, arial;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #aaa;
+    display: block;
+    text-align: center;
+    margin: 0;
+    background-color: #111;
+    @include transition(all, 1s);
+
+    &:hover {
+      background-color: #444;
+    }
+  }
+}
+
+#a1:target #p1,
+#a2:target #p2,
+#a3:target #p3 { 
+  background-color: red; color: #fff; }
+
+
