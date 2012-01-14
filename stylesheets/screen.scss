@@ -4,7 +4,13 @@
 /* Basic Styles */
 
 * { margin: 0; padding: 0; }
-body { overflow: hidden; color: #222; font-family: helvetica, arial; line-height: 1.2; } a:active { outline: none;}
+body {
+  overflow: hidden;
+  color: #222;
+  font-family: helvetica, arial; 
+  line-height: 1.2;
+  background: url("http://subtlepatterns.com/patterns/black-Linen.png") fixed; } 
+a:active { outline: none;}
 .nextbutton, .backbutton { position: absolute; top: 0; height: 100%; width: 50%; }
 .nextbutton { cursor: url('right.png'), e-resize; right: 0; }
 .backbutton { cursor: url('left.png'), w-resize; left: 0; }
@@ -28,14 +34,29 @@ $page1-bottom: darken($page1-top, 20%);
 /* The Pages */
 
 #i1 {
-  top: 100%;
-  background: #fff url("http://subtlepatterns.com/patterns/type.png"); }
+  top: 100%; }
 #i2 {
-  top: 200%;
-  background: #bbb url("http://www.emuzikos.com/images/backgrounds/bg-footer.gif"); }
+  top: 200%; }
 #i3 {
-  top: 300%;
-  background: #777 url("http://subtlepatterns.com/patterns/type.png");; }
+  top: 300%; }
+
+.content {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.work-sample {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  img {
+    border: 4px solid #fff;
+    @include border-radius(4px);
+    @include box-shadow(0 0 6px #000);
+    display: inline-block;
+    margin: 1em;
+  } 
+}
 
 
 /* The Transition Effect */
@@ -76,6 +97,7 @@ table {
   top: -1px;
   left: 0;
   right: 0;
+      @include box-shadow(0 0 6px #000);
 
   a {
     line-height: 54px;
@@ -99,6 +121,6 @@ table {
 #a1:target #p1,
 #a2:target #p2,
 #a3:target #p3 { 
-  background-color: red; color: #fff; }
+  background-color: #333; color: #fff; }
 
 
