@@ -8,21 +8,24 @@ require 'serve/rack'
 
 require 'sass/plugin/rack'
 require 'compass'
+require 'bootstrap-sass'
 
 # The project root directory
 root = ::File.dirname(__FILE__)
 
 # Compass
-Compass.add_project_configuration(root + '/compass.config')
+Compass.add_project_configuration(root + '/config.rb')
 Compass.configure_sass_plugin!
 
-# Common Rack Middleware
+# Rack Middleware
 use Rack::ShowStatus      # Nice looking 404s and other messages
 use Rack::ShowExceptions  # Nice looking errors
 
+# Because Heroku doesn't allow you to write to the file system,
+# if you're not using Heroku in production this condition won't be needed
 if ENV['RACK_ENV'] == "production"
   # Use Rack::Static with Heroku
-  use Rack::Static, :urls => ["/images", "/javascripts", "/stylesheets"], :root => "public"
+  use Rack::Static, :urls => ["/images", "/javascripts", "/stylesheets", "docs", "fonts"], :root => "public"
   run Serve::RackAdapter.new(root + '/views')
 else
   # Compile Sass on the fly

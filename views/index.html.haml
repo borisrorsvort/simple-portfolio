@@ -1,0 +1,29 @@
+- @title = 'Boris Rorsvort - Brussels, Belgium'
+- @subtitle = 'Interface & Ux Designer'
+
+%section.wrapper
+  .inner
+    %ul.social_medias
+      %li
+        %a{:href => "http://twitter.com/borisrorsvort", :class => "btn", :title => "Follow me on Twitter"}
+          %i.icon-twitter
+      %li
+        %a{:href => "http://github.com/borisrorsvort", :class => "btn", :title => "View my Github profile"}
+          %i.icon-github
+      %li
+        %a{:href => "http://linkedin.com/in/borisrorsvort", :class => "btn", :title => "View my LinkedIn profile"}
+          %i.icon-linkedin
+      %li
+        %a{:href => "/docs/borisrorsvort-vcard.vcf", :class => "btn", :title => "Download my vCard"}
+          %i.icon-user
+      %li
+        %a{:href => "weblog.rorsvort.com", :class => "btn", :title => "Read my blog"}
+          %i.icon-rss
+    %hgroup
+      %h1= @title
+      .legacy EST. MCMLXXXIII
+      %h2.mega-title= @subtitle
+
+    = link_to '', "http://trustedfamily.net", :class => 'trusted-family', :title => "Visited Trusted Family website"
+
+
