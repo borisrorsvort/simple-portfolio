@@ -25,7 +25,7 @@ use Rack::ShowExceptions  # Nice looking errors
 # if you're not using Heroku in production this condition won't be needed
 if ENV['RACK_ENV'] == "production"
   # Use Rack::Static with Heroku
-  use Rack::Static, :urls => ["/images", "/javascripts", "/stylesheets", "docs", "fonts"], :root => "public"
+  use Rack::Static, :urls => ["/images", "/javascripts", "/stylesheets", "/docs"], :root => "public"
   run Serve::RackAdapter.new(root + '/views')
 else
   # Compile Sass on the fly
