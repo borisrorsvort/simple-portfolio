@@ -1,11 +1,5 @@
-source :rubygems
+source "http://rubygems.org"
 
-gem 'serve'
-gem 'haml'
-gem 'sass'
-gem 'compass'
-gem 'css_parser'
-gem 'maruku'
-gem 'guard-livereload'
-gem 'bootstrap-sass'
-gem 'heroku'
+gem 'jekyll', '~>1.4.0'
+gem 'redcarpet'
+gem 'compass', '>=0.12'

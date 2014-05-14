@@ -1,0 +1,53 @@
+---
+layout: default
+title: Boris Rorsvort - Brussels, Belgium
+subtitle: Ui & Frontend development
+---
+
+<section class="wrapper">
+  <div class="inner">
+    <ul class="social_medias">
+      <li>
+        <a href="" href="http://twitter.com/borisrorsvort" class ="btn" title="Follow me on Twitter">
+          <i class="icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a href="" href="http://github.com/borisrorsvort" class ="btn" title="View my Github profile">
+          <i class="icon-github"></i>
+        </a>
+      </li>
+      <li>
+        <a href="" href="http://linkedin.com/in/borisrorsvort" class ="btn" title="View my LinkedIn profile">
+          <i class="icon-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="" href="/docs/borisrorsvort-vcard.vcf" class ="btn" title="Download my vCard">
+          <i class="icon-user"></i>
+        </a>
+      </li>
+      <li>
+        <a href="" href="http://weblog.rorsvort.com" class ="btn" title="Read my blog">
+          <i class="icon-rss"></i>
+        </a>
+      </li>
+    </ul>
+    <hgroup>
+      <h1>
+        {{page.title}}
+      </h1>
+      <div class="legacy">
+         EST. MCMLXXXIII
+      </div>
+      <h2 class="mega-title">
+        {{page.subtitle}}
+      </h2>
+    </hgroup>
+  </div>
+</section>
+
+{% for post in site.posts %}
+  {{ post.date | date: "%B %e, %Y" }}
+  <a href="{{ post.url }}">{{ post.title }}</a>
+{% endfor %}
