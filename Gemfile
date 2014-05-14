@@ -1,5 +1,7 @@
 source "http://rubygems.org"
 
-gem 'jekyll', '~>1.4.0'
+gem 'jekyll', '~>2.0.0'
 gem 'redcarpet'
+gem 'kramdown'
+gem 'coderay'
 gem 'compass', '>=0.12'

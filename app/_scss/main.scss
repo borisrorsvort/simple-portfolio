@@ -1,20 +1,19 @@
 @import 'variables';
 @import 'bootstrap_init';
 @import 'fontello';
+@import 'highlight';
 @import 'svg_background';
 
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: 'nevis';
-  src: local('☺'), url('../font/nevis.ttf') format('truetype');
-}
+// @font-face {
+//   font-weight: normal;
+//   font-style: normal;
+//   font-family: 'nevis';
+//   src: local('☺'), url('../font/nevis.ttf') format('truetype');
+// }
 
 body {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  // text-shadow: #000 0 1px 10px;
+  background: #1d1e3a;
+  color: $text-color;
 }
 
 h1 {
@@ -29,12 +28,13 @@ h1 {
 }
 
 h2 {
-  margin: ($grid-gutter-width * 2) $grid-gutter-width;
-  text-transform: uppercase;
+  margin: ($grid-gutter-width * 2) $grid-gutter-width ($grid-gutter-width * 4);
   font-size: $grid-gutter-width * 2;
-  font-family: $special-serif-font;
   line-height: 50px;
-  text-shadow: #000 0 1px 10px;
+}
+
+h3 {
+  font-weight: 100;
 }
 
 .legacy {
@@ -44,16 +44,9 @@ h2 {
   text-shadow: #000 0 1px 10px;
 }
 
-.wrapper {
-  display: table;
-  width: 100%;
-  height: 100%;
-}
-
-.inner {
-  display: table-cell;
-  min-height: 100%;
-  vertical-align: middle;
+.home-wrapper {
+  text-align: center;
+  color: #fff;
 }
 
 .social_medias {
@@ -65,3 +58,5 @@ h2 {
     margin: none;
   }
 }
+
+// .clearfix {}

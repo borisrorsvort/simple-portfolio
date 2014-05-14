@@ -3,11 +3,11 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: attacwb
-description: Site Officiel d'Attac Wallonie-Bruxelles
+name: borisrorsvort
+description: Boris Rorsvort - Site officel
 author:
   name: Boris Rorsvort
-  email: bxl2.webmaster@attac.be
+  email: boris@rorsvort.com
 
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
@@ -20,7 +20,7 @@ future: true
 show_drafts: true
 
 # Markdown library
-markdown: redcarpet
-#   extensions: ['fenced_code_blocks', 'smart']
-
-pygments: false
+markdown: kramdown
+extensions: ['fenced_code_blocks', 'smart']
+highlighter: pygments
+pygments: true

@@ -109,7 +109,7 @@ module.exports = function (grunt) {
         // require: ['singularity', 'jacket'],
         bundleExec: true,
         sassDir: '<%= yeoman.app %>/_scss',
-        importPath: '<%= yeoman.app %>/bower_components',
+        importPath: '<%= yeoman.app %>/_bower_components',
         cssDir: '.tmp/css',
         imagesDir: '<%= yeoman.app %>/img',
         javascriptsDir: '<%= yeoman.app %>/js',
