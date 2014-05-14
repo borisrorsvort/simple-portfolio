@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Testing at Emuzikos: a BDD story
+title: "Testing at Emuzikos: a BDD story"
 categories: blog
 ---
 
@@ -21,6 +21,7 @@ So here is the workflow I've put in place to optimize my output.
 ### Spinach, a Cucumber without regex
 
 I recently discovered [Spinach](http://codegram.github.io/spinach/): a BDD framework written in pure Ruby that features encapsulation and modularity of your step definitions.
+
 I used to work only with rpsec and steak but felt that I was missing some clarity about what the app is supposed to do at a glance (and other reasons described [here](http://blog.codegram.com/2011/10/how-to-achieve-more-clean-encapsulated-modular-step-definitions-with-spinach)). I wanted to switch to a gherkin style integration testing framework.
  
 So for each feature that I build, I write an integration test that describes the big picture. 
@@ -28,37 +29,38 @@ Coming from rspec you, at first, often tend to replicate the capybara steps in g
 
 So there is no point to start speaking about technicalities (like clicks, fill-in inputs, …) when you describe a behaviour. 
 
-    #### Bad
+{% highlight cucumber %}
+#### Bad
 
-    Feature: Testimonials
-      Background:
-        Given I go the login page 
-        And I fill in email with john@doe.com
-        And I fill in password with 1234
-        And I click the submit button
+Feature: Testimonials
+  Background:
+    Given I go the login page 
+    And I fill in email with john@doe.com
+    And I fill in password with 1234
+    And I click the submit button
 
-      Scenario: Create a new testimonial with valid data
-        Given I go to the new testimonials page
-        And I fill in body with 'Cool App dude!'
-        And I click the submit button
-        And I log in as an admin
-        And I go the testonial page
-        And I approve the testimonial
-	    …
-	    ZZzzzzzzz
+  Scenario: Create a new testimonial with valid data
+    Given I go to the new testimonials page
+    And I fill in body with 'Cool App dude!'
+    And I click the submit button
+    And I log in as an admin
+    And I go the testonial page
+    And I approve the testimonial
+    …
+    ZZzzzzzzz
 
-    #### Good
+#### Good
 
-    Feature: Testimonials
-      Background:
-        Given I am logged in
+Feature: Testimonials
+  Background:
+    Given I am logged in
 
-      Scenario: Create a new testimonial with valid data
-        When I go to the new testimonials page
-        And I submit the form
-        And it is approved by an admin
-        Then I should see the testimonial on the index page
-
+  Scenario: Create a new testimonial with valid data
+    When I go to the new testimonials page
+    And I submit the form
+    And it is approved by an admin
+    Then I should see the testimonial on the index page
+{% endhighlight %}
 
 Then you do all the capybara, phantomjs magic in your steps file. You get the thing …
 
@@ -72,45 +74,37 @@ As your test suite grows you don't want to wait all the tests to pass locally be
 
 As you develop a new feature:
 
-    git flow feature start awesome_feature
-    zeus start
-
----
+{% highlight bash %}
+git flow feature start awesome_feature
+zeus start
+{% endhighlight %}
 
 * write your feature specific specs
 * write the code to make the feature specific tests pass
 
----
-
-    git commit -am "Fix the tests"
-    git flow feature finish awesome_feature // which will nmerge it back to dev
-    git push // make sure develop has a deployment method to a staging server
-
----
+{% highlight bash %}
+git commit -am "Fix the tests"
+git flow feature finish awesome_feature // which will nmerge it back to dev
+git push // make sure develop has a deployment method to a staging server
+{% endhighlight %}
 
 * check if the full test suite passes in codeship and send staging server to user-testing or client for getting feedback
 * fix the eventual bugs until the tests are all green
 
----
-
-    git flow release start new_set_of_features // so you get the version tag and all
-
----
+{% highlight bash %}
+git flow release start new_set_of_features // so you get the version tag and all
+{% endhighlight %}
 
 * you can still do some commit at this point
 
----
-
-    git flow release finish new_set_of_features
-    git push
-
----
+{% highlight bash %}
+git flow release finish new_set_of_features
+git push
+{% endhighlight%}
 
 * let the test run on Codeship.
 * let Codeship deploy for you.
 * grab a beer, celebrate!
-
----
 
 ## Conclusions
 

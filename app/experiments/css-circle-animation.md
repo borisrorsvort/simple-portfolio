@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Css circle animation
-categories: blog
+categories: experiments
 ---
 
 I wanted to try illustrative animations in css3 and i gave it a try a while ago. Here is how it goes:

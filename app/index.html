@@ -50,16 +50,18 @@ subtitle: Ui & Frontend development
   </hgroup>
   <div class="clearfix"></div>
 </section>
-<div class="row">
+<div class="row home-sections">
   <div class="home-section home-section--articles col-md-4">
     <header>
       <h3>Latest Articles</h3>
     </header>
       {% for post in site.posts %}
-        <div class="home-section--article">
-          <div class="home-section--article--date text-muted">{{ post.date | date: "%B %e, %Y" }}</div>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </div>
+        {% if post.categories contains 'blog' %}
+          <div class="home-section--article">
+            <div class="home-section--article--date text-muted">{{ post.date | date: "%B %e, %Y" }}</div>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </div>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>
@@ -67,12 +69,25 @@ subtitle: Ui & Frontend development
     <header>
       <h3>Latest experiments</h3>
     </header>
-    zefzefzefze
+      {% for page in site.pages %}
+        {% if page.categories contains 'experiments' %}
+          <div class="home-section--article">
+            <a href="{{ page.url }}">{{ page.title }}</a>
+          </div>
+        {% endif %}
+      {% endfor %}
+      <iframe src="https://githubbadge.appspot.com/borisrorsvort" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
   </div>
   <div class="home-section col-md-4">
     <header>
-      <h3>Projects & Open source</h3>
+      <h3>Side Project</h3>
     </header>
-    zefzefzefze
+    {% for page in site.pages %}
+      {% if page.categories contains 'projects' %}
+        <div class="home-section--article">
+          <a href="{{ page.url }}">{{ page.title }}</a>
+        </div>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
