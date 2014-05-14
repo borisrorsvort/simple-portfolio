@@ -1,0 +1,23 @@
+#svg-bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.q0-3 { fill: rgb(40, 43, 58); }
+.q1-3 { fill: rgb(40, 48, 58); }
+.q2-3 { fill: rgb(30, 43, 58); }
+
+path {
+  stroke: rgb(41, 44, 52);
+}
+
+path:first-child {
+  fill: rgb(48, 58, 66) !important;
+}
+
+circle {
+  fill: white;
+  pointer-events: none;
+}

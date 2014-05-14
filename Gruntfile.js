@@ -43,6 +43,7 @@ module.exports = function (grunt) {
         files: [
           '.jekyll/**/*.html',
           '{.tmp,<%= yeoman.app %>}/css/**/*.css',
+          '{.tmp,<%= yeoman.app %>}/font/**/*.{eot,svg,ttf,woff}',
           '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
           '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
         ]
@@ -115,7 +116,7 @@ module.exports = function (grunt) {
         relativeAssets: false,
         httpImagesPath: '/img',
         httpFontsPath: '/styles/fonts',
-        fontsDir: '<%= yeoman.app %>/styles/fonts',
+        fontsDir: '<%= yeoman.app %>/fonts',
         httpGeneratedImagesPath: '/img/generated',
         outputStyle: 'expanded',
         raw: 'extensions_dir = "<%= yeoman.app %>/_bower_components"\n'
@@ -301,19 +302,13 @@ module.exports = function (grunt) {
     },
     fontello: {
       options: {
-        sass: true,
+        scss: true,
         force: true
-      },
-      dist: {
-        options: {
-            fonts   : 'dist/fonts',
-            styles  : 'dist/css',
-        }
       },
       dev: {
         options: {
             config  : '<%= yeoman.app %>/config.json',
-            fonts   : '<%= yeoman.app %>/fonts',
+            fonts   : '<%= yeoman.app %>/font',
             styles  : '<%= yeoman.app %>/_scss',
         }
       }
