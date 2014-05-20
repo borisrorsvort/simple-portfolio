@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem 'jekyll', '~>2.0.0'
+gem 'jekyll', git: 'git@github.com:jekyll/jekyll.git'
 gem 'redcarpet'
 gem 'kramdown'
 gem 'coderay'

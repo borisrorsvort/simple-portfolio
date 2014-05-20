@@ -2,11 +2,42 @@ $(document).ready(function () {
   $('[rel=tooltip]').tooltip();
   $('a[rel*="external"]').attr('target', '_blank');
   InitSvg.init();
+  dribbbleShots.init();
 })
 $(window).on("resize", function () {
   InitSvg.init();
 });
 
+
+var dribbbleShots = (function() {
+  'use strict';
+
+  function renderShots (data) {
+    var templateHtml = $("#shots-template").html(),
+        template     = Handlebars.compile(templateHtml);
+    $(".dribbbleShots .home-section--article").append(template(data.shots));
+  }
+
+  function getShots () {
+    $.ajax({
+      type: 'GET',
+      url: 'http://api.dribbble.com/players/borisrorsvort/shots',
+      data: {per_page: 6},
+      dataType: 'jsonp',
+      success: function (data) {
+        renderShots(data);
+      }
+    });
+  }
+
+  var dribbbleShots = {
+    init: function () {
+      getShots();
+    }
+  };
+
+  return dribbbleShots;
+}());
 
 var InitSvg = {
   init: function () {
@@ -251,8 +282,11 @@ var InitSvg = {
       return boid;
     })();
 
+    // From jasondavies:
+    // http://www.jasondavies.com/voroboids/
+
     // Initialise boids.
-    var boids = d3.range(100).map(function() {
+    var boids = d3.range(60).map(function() {
       return boid()
           .position([Math.random() * w, Math.random() * h])
           .velocity([Math.random() * 2 - 1, Math.random() * 2 - 1])
@@ -308,8 +342,5 @@ var InitSvg = {
           .attr("d", function(d) { return "M" + d.join("L") + "Z"; })
           // .style("fill", function(d) { return fill((d3.geom.polygon(d).area())); });
     });
-
-    // http://www.jasondavies.com/voroboids/
-    // http://www.jasondavies.com/voroboids/
   }
 }

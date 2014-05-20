@@ -4,3 +4,4 @@ dist
 .sass-cache
 app/_bower_components/**/*
 .jekyll
+_site

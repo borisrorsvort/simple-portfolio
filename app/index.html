@@ -53,41 +53,62 @@ subtitle: Ui & Frontend development
 <div class="row home-sections">
   <div class="home-section home-section--articles col-md-4">
     <header>
-      <h3>Latest Articles</h3>
+      <h3>
+        Latest Articles
+        <!-- <small class='pull-right'>
+          <a href="/articles">see all</a>
+        </small> -->
+      </h3>
     </header>
-      {% for post in site.posts %}
-        {% if post.categories contains 'blog' %}
-          <div class="home-section--article">
-            <div class="home-section--article--date text-muted">{{ post.date | date: "%B %e, %Y" }}</div>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="home-section col-md-4">
+    {% for post in site.posts limit: 5 %}
+      {% if post.categories contains 'blog' %}
+        <div class="home-section--article">
+          <div class="home-section--article--date text-muted">{{ post.date | date: "%B %e, %Y" }}</div>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </div>
+      {% endif %}
+    {% endfor %}
+
     <header>
-      <h3>Latest experiments</h3>
-    </header>
-      {% for page in site.pages %}
-        {% if page.categories contains 'experiments' %}
-          <div class="home-section--article">
-            <a href="{{ page.url }}">{{ page.title }}</a>
-          </div>
-        {% endif %}
-      {% endfor %}
-      <iframe src="https://githubbadge.appspot.com/borisrorsvort" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
-  </div>
-  <div class="home-section col-md-4">
-    <header>
-      <h3>Side Project</h3>
+      <h3>
+        Side Projects
+      </h3>
     </header>
     {% for page in site.pages %}
-      {% if page.categories contains 'projects' %}
+      {% if page.categories contains 'current' %}
         <div class="home-section--article">
-          <a href="{{ page.url }}">{{ page.title }}</a>
+          <a href="{{site.url}}{{page.url}}">{{ page.title }}</a>
         </div>
       {% endif %}
     {% endfor %}
   </div>
+  <div class="home-section col-md-4">
+    <header>
+      <h3>About Me</h3>
+    </header>
+    <p>Though coming from a design background, I'm now working mostly on frontend development, integration and user experience.</p>
+    <p>As a designigneer, my daily tools are ember.js, Ruby on Rails, ...</p>
+    <p>Besides my day to day job, I'm mainly focused on building non-profit web applications that solves specific problems in the public space.</p>
+    <iframe src="https://githubbadge.appspot.com/borisrorsvort" class="github-badge" frameBorder="0"></iframe>
+    <div class="clearfix"></div>
+  </div>
+  <div class="home-section col-md-4 dribbbleShots">
+    <header>
+      <h3>Latest Shots</h3>
+    </header>
+    <div class="clearfix"></div>
+    <div class="home-section--article row"></div>
+  </div>
 </div>
+
+{% raw %}
+<script id="shots-template" type="text/x-handlebars-template">
+    {{#each this}}
+      <div class="col-xs-6">
+        <a href="{{url}}" class="thumbnail">
+          <img src="{{image_url}}">
+        </a>
+      </div>
+    {{/each}}
+</script> 
+{% endraw %}

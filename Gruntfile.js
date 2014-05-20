@@ -58,7 +58,6 @@ module.exports = function (grunt) {
       },
       livereload: {
         options: {
-          open: true,
           base: [
             '.tmp',
             '.jekyll',
@@ -115,8 +114,8 @@ module.exports = function (grunt) {
         javascriptsDir: '<%= yeoman.app %>/js',
         relativeAssets: false,
         httpImagesPath: '/img',
-        httpFontsPath: '/styles/fonts',
-        fontsDir: '<%= yeoman.app %>/fonts',
+        httpFontsPath: '/font',
+        fontsDir: '<%= yeoman.app %>/font',
         httpGeneratedImagesPath: '/img/generated',
         outputStyle: 'expanded',
         raw: 'extensions_dir = "<%= yeoman.app %>/_bower_components"\n'
@@ -229,9 +228,9 @@ module.exports = function (grunt) {
           src: [
             // Jekyll processes and moves HTML and text files.
             // Usemin moves CSS and javascript inside of Usemin blocks.
-            // Copy moves asset files and directories.
+            // Copy moves asset files and directories.g
             'img/**/*',
-            'fonts/**/*',
+            'font/**/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             '!**/_*{,/**}'
             // Explicitly add any files your site needs for distribution here.
@@ -253,7 +252,7 @@ module.exports = function (grunt) {
             '<%= yeoman.dist %>/js/**/*.js',
             '<%= yeoman.dist %>/css/**/*.css',
             '<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
-            '<%= yeoman.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}'
+            '<%= yeoman.dist %>/font/**/*.{eot*,otf,svg,ttf,woff}'
           ]
         }]
       }

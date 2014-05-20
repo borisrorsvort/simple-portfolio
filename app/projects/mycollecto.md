@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "MyCollecto, searching nearby Collecto taxi points"
-categories: projects
+title: "MyCollecto: searching nearby Collecto taxi points"
+categories: [projects, current]
 ---
 
 Trouvez facilement et gratuitement le point Collecto le plus proche de chez vous

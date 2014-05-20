@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Emuzikos, the first easy way to find local musicians
-categories: projects
+title: "Emuzikos: the first easy way to find local musicians"
+categories: [projects, current]
+thumbUrl: "/img/projects/portfolio.png"
 ---
 
 ![im](http://cl.ly/image/233J25113I0O/emuzikos_facebook_timelie1.jpg)
