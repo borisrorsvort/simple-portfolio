@@ -21,7 +21,7 @@ var dribbbleShots = (function() {
   function getShots () {
     $.ajax({
       type: 'GET',
-      url: 'http://api.dribbble.com/players/borisrorsvort/shots',
+      url: 'https://api.dribbble.com/players/borisrorsvort/shots',
       data: {per_page: 6},
       dataType: 'jsonp',
       success: function (data) {
