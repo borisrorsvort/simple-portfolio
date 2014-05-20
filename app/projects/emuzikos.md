@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Emuzikos: the first easy way to find local musicians"
-categories: [projects, current]
+categories: [portfolio, current]
 thumbUrl: "/img/projects/portfolio.png"
 ---
 
