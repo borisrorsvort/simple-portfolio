@@ -15,7 +15,7 @@ var dribbbleShots = (function() {
   function renderShots (data) {
     var templateHtml = $("#shots-template").html(),
         template     = Handlebars.compile(templateHtml);
-    $(".dribbbleShots .home-section--article").append(template(data.shots));
+    shotContainer.append(template(data.shots));
   }
 
   function getShots () {
@@ -30,9 +30,13 @@ var dribbbleShots = (function() {
     });
   }
 
+  var shotContainer = $(".dribbbleShots .home-section--article");
+
   var dribbbleShots = {
     init: function () {
-      getShots();
+      if (shotContainer.length) {
+        getShots();
+      }
     }
   };
 

@@ -1,0 +1,15 @@
+<div class="back-nav">
+  {%if page.previous %}
+    <a href="{{ page.previous.url }}" class="btn btn-primary">
+      <i class="icon-back"></i>
+      Previous
+    </a>
+  {% endif %}
+
+  {%if page.next %}
+    <a href="{{ page.next.url }}" class="btn btn-primary">
+      <i class="icon-back"></i>
+      Next
+    </a>
+  {% endif %}
+</div>

@@ -1,6 +1,10 @@
+$body-bg: #1d1e3a;
+
 $brand-primary: #282b3a;
-$text-color: #7d92a9;
-$link-color: #fff;
+$link-color: #7d92a9;
+$text-color: lighten($link-color, 20%);
 $font-size-base: 16px;
 $special-serif-font: "nevis";
 $grid-gutter-width: 60px;
+$navbar-inverse-bg: $body-bg;
+

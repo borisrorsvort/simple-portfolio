@@ -2,7 +2,7 @@
 layout: post
 title: Simple static html partials includes with yeoman and grunt.js
 categories: blog
-comments: false
+comments: true
 ---
 
 

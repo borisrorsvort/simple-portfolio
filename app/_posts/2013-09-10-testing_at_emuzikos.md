@@ -2,6 +2,7 @@
 layout: post
 title: "Testing at Emuzikos: a BDD story"
 categories: blog
+comments: true
 ---
 
 ## Context 

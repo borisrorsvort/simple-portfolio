@@ -1,9 +1,9 @@
 body {
-  background: #1d1e3a;
+  background: $body-bg;
   color: $text-color;
 }
 
 
-h2, h3 {
+h1, h2, h3 {
   font-weight: 100;
 }
