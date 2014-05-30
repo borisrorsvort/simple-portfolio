@@ -30,13 +30,11 @@ subtitle: Ui & Frontend development
         </small> -->
       </h3>
     </header>
-    {% for post in site.posts limit: 5 %}
-      {% if post.categories contains 'blog' %}
+    {% for post in site.categories.blog limit: 5 %}
         <div class="home-section--article">
           <div class="home-section--article--date text-muted">{{ post.date | date: "%B %e, %Y" }}</div>
           <a href="{{ post.url }}">{{ post.title }}</a>
         </div>
-      {% endif %}
     {% endfor %}
 
     <header>
