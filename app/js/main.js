@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('[rel=tooltip]').tooltip();
+  $('[rel*=tooltip]').tooltip();
   $('a[rel*="external"]').attr('target', '_blank');
   InitSvg.init();
   dribbbleShots.init();
