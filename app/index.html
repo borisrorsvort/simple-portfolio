@@ -45,7 +45,7 @@ subtitle: Ui & Frontend development
     {% for page in site.pages %}
       {% if page.categories contains 'current' %}
         <div class="home-section--article">
-          <a href="{{site.url}}{{page.url}}">{{ page.title }}</a>
+          <a href="{{page.url}}">{{ page.title }}</a>
         </div>
       {% endif %}
     {% endfor %}
