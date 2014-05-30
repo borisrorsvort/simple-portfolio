@@ -6,6 +6,11 @@
     max-width: 100%;
   }
 }
-// .post--header {
-//   text-align: center;
-// }
+
+.post--header {
+  margin-top: 0;
+
+  h1 {
+    margin-top: 20px;
+  }
+}
