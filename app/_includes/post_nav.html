@@ -1,15 +1,33 @@
-<div class="back-nav">
+<div class="pager">
   {%if page.previous %}
-    <a href="{{ page.previous.url }}" class="btn btn-primary">
-      <i class="icon-back"></i>
-      Previous
-    </a>
+    <li>
+      <a href="{{ page.previous.url }}" title="{{ page.previous.title }}" rel='tooltip'>
+        <i class="icon-left-open"></i>
+        Previous article
+      </a>
+    </li>
+  {% else %}
+    <li  class="disabled">
+      <a>
+        <i class="icon-left-open"></i>
+        Previous article
+      </a>
+    </li>
   {% endif %}
 
   {%if page.next %}
-    <a href="{{ page.next.url }}" class="btn btn-primary">
-      <i class="icon-back"></i>
-      Next
-    </a>
+    <li>
+      <a href="{{ page.next.url }}" title="{{ page.next.title }}" rel='tooltip'>
+        <i class="icon-right-open"></i>
+        Next article
+      </a>
+    </li>
+  {% else %}
+    <li  class="disabled">
+      <a>
+        Next article
+        <i class="icon-right-open"></i>
+      </a>
+    </li>
   {% endif %}
 </div>
