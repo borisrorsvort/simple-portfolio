@@ -16,15 +16,16 @@ Musicians web platform have been a pain to use until now because of several reas
 * It’s a web service based on a profitable business model and they’re seriously too expensive for most of the poor musicians
 * The registration process is too long.
 
-## So here is a nice solution. Its free, easy & fast.
+### So here is a nice solution. Its free, easy & fast.
 
 Emuzikos is a search engine for local musicians, bands or agents. As mentioned before, it’s completely free. It claims to be the missing tool of the musicians world.
 
-## The interface is pretty neat and easy to use.
+### The interface is pretty neat and easy to use.
 
 You can search for musicians, bands or agents. Sort them by instruments, musical genres, country, zip code,… and promote your profile on multiple social networks.
 
 You also got a personal inbox and a contact list where you can save members.
 
-[Visit Emuzikos now](http://emuzikos.com)
+<hr/>
+<a href="http://emuzikos.com" class="btn btn-default">Visit Emuzikos now</a>
 
