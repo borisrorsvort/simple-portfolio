@@ -3,7 +3,8 @@ $(document).ready(function () {
   $('a[rel*="external"]').attr('target', '_blank');
   InitSvg.init();
   dribbbleShots.init();
-})
+});
+
 $(window).on("resize", function () {
   InitSvg.init();
 });
@@ -45,6 +46,8 @@ var dribbbleShots = (function() {
 
 var InitSvg = {
   init: function () {
+    if (!$('.home-wrapper').length) return false;
+
     $('svg').remove();
     var w = $(document).outerWidth(),
         h = $(".home-wrapper").outerHeight(),
