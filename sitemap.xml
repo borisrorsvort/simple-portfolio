@@ -22,7 +22,7 @@
   
   
   <url>
-      <loc>http://wb.attac.be/articles/</loc>
+      <loc>http://wb.attac.be/feed.xml</loc>
   </url>
   
   
@@ -39,6 +39,14 @@
   
   <url>
       <loc>http://wb.attac.be/projects/</loc>
+  </url>
+  
+  
+  
+  
+  
+  <url>
+      <loc>http://wb.attac.be/blog/</loc>
   </url>
   
   

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Boris Rorsvort's articles</title>
+		<description>My latest technical writings</description>
+		<link>http://www.rorsvort.com</link>
+		<atom:link href="http://www.rorsvort.com/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Simple static html partials includes with yeoman and grunt.js</title>
+				<description>&lt;p&gt;So you have this typical static site built with &lt;a href=&quot;http://&quot;&gt;Yeoman&lt;/a&gt;. You probably duplicated your layout for each of the pages you sites contains. So you probably wondered how to actually include some partials and DRY up these pages.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-tool&quot;&gt;The tool&lt;/h2&gt;
+
+&lt;p&gt;First you’ll need to install &lt;a href=&quot;https://github.com/MathiasPaumgarten/grunt-bake&quot;&gt;Grunt bake&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;npm install grunt-bake --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Since Yeoman is loading all the available tasks from the top of your grunt file, there is no need to import the bake tasks anymore.&lt;/p&gt;
+
+&lt;p&gt;Bake actually has a lot more tasks that we need for this simple example, so I’ll let you discover the rest.&lt;/p&gt;
+
+&lt;h2 id=&quot;update-you-gruntjs-file&quot;&gt;Update you grunt.js file&lt;/h2&gt;
+
+&lt;p&gt;First, create a bake task inside you grunt config.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;bake&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	    &lt;span class=&quot;nx&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	        &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	            &lt;span class=&quot;c1&quot;&gt;// Task-specific options go here.&lt;/span&gt;
+	        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+	        &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	            &lt;span class=&quot;c1&quot;&gt;// files go here, like so:&lt;/span&gt;
+	            &lt;span class=&quot;s2&quot;&gt;&amp;quot;app/index.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;app/base.html&amp;quot;&lt;/span&gt;
+	        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Since you need to include the partials before usemin take actions on the index.html to concatenate you assets, you need to &lt;strong&gt;rename your index.html to base.html&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, edit you server task:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;registerTask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;server&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;dist&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;build&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;open&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;connect:dist:keepalive&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;clean:server&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;bake:build&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;concurrent:server&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;connect:livereload&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;open&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;watch&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now this will includes the partials in base.html to index.html and then will be moved to the temp directory for livereload to watch.&lt;/p&gt;
+
+&lt;p&gt;You also need to do somehting similar for the build task, make sure the bake task happens before the useminPrepare:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;registerTask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;build&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;clean:dist&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;bake:build&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;useminPrepare&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;concurrent:dist&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;concat&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;cssmin&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;uglify&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;copy:dist&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;rev&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;usemin&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now to make livereload catch your changes you need to add the folder where you want it to watch your partials. In our case we’ll use app/includes:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;compass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;%= yeoman.app %&amp;gt;/styles/{,*/}*.{scss,sass}&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;compass:server&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;styles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;%= yeoman.app %&amp;gt;/styles/{,*/}*.css&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;copy:styles&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;bake&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;%= yeoman.app %&amp;gt;/includes/**&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;bake:build&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;livereload&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;livereload&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;LIVERELOAD_PORT&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;%= yeoman.app %&amp;gt;/*.html&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;.tmp/styles/{,*/}*.css&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;{.tmp,&amp;lt;%= yeoman.app %&amp;gt;}/scripts/{,*/}*.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;%= yeoman.app %&amp;gt;/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;include-you-partials-in-basehtml&quot;&gt;Include you partials in base.html&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--(bake includes/header.html)--&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;So a simple page could look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--(bake includes/header.html)--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!--(bake includes/sidebar.html)--&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!--(bake includes/main-content.html)--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+				<pubDate>Fri, 11 Apr 2014 00:00:00 +0200</pubDate>
+				<link>http://www.rorsvort.com/blog/2014/04/11/simple-static-html-partials-includes-with-yeoman-and-gruntjs.html</link>
+				<guid isPermaLink="true">http://www.rorsvort.com/blog/2014/04/11/simple-static-html-partials-includes-with-yeoman-and-gruntjs.html</guid>
+			</item>
+		
+			<item>
+				<title>Testing at Emuzikos: a BDD story</title>
+				<description>&lt;h2 id=&quot;context&quot;&gt;Context&lt;/h2&gt;
+
+&lt;p&gt;A month ago, when I started using codeship I didn’t realize how more worry-free my designer/developper life could be. I came across continuous integration testing a year ago when I started to work on a big social network application (&lt;a href=&quot;http://trustedfamily.net&quot;&gt;TrustedFamily&lt;/a&gt;). They were already 3 developpers working on differents features and because of code security policies were using &lt;a href=&quot;http://http://jenkins-ci.org/&quot;&gt;Jenkins CI&lt;/a&gt;.
+Around that time I started to build, as a side project, a musicians searching app (&lt;a href=&quot;http://emuzikos.com&quot;&gt;Emuzikos&lt;/a&gt;). 
+As a musician I always thought that these musicians forums were a pain when it comes to searching for other people and as designer/developper I found that building an app would be more gratifying and easier to maintain than an constantly outdated portfolio.&lt;/p&gt;
+
+&lt;p&gt;Working on a side project also mean you have small chunks of time to work on your app. Here more than ever the agile methodology make sense: split your projects tasks into some smaller one and isolated one that match the time frames you’re working in.&lt;/p&gt;
+
+&lt;p&gt;Idealy you want to test each of these small releases, so that when you push your code you make sure you don’t break the entire app.&lt;/p&gt;
+
+&lt;p&gt;So here is the workflow I’ve put in place to optimize my output.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-tools&quot;&gt;The tools&lt;/h2&gt;
+
+&lt;h3 id=&quot;spinach-a-cucumber-without-regex&quot;&gt;Spinach, a Cucumber without regex&lt;/h3&gt;
+
+&lt;p&gt;I recently discovered &lt;a href=&quot;http://codegram.github.io/spinach/&quot;&gt;Spinach&lt;/a&gt;: a BDD framework written in pure Ruby that features encapsulation and modularity of your step definitions.&lt;/p&gt;
+
+&lt;p&gt;I used to work only with rpsec and steak but felt that I was missing some clarity about what the app is supposed to do at a glance (and other reasons described &lt;a href=&quot;http://blog.codegram.com/2011/10/how-to-achieve-more-clean-encapsulated-modular-step-definitions-with-spinach&quot;&gt;here&lt;/a&gt;). I wanted to switch to a gherkin style integration testing framework.&lt;/p&gt;
+
+&lt;p&gt;So for each feature that I build, I write an integration test that describes the big picture. 
+Coming from rspec you, at first, often tend to replicate the capybara steps in gherkin, which leads to unreadable specs and makes them impossible to transmit to any shareholder or even yourself when you have to fix bugs. It’s also very tedious to maintain because you have to change the code at two places each time you change a class or some text.&lt;/p&gt;
+
+&lt;p&gt;So there is no point to start speaking about technicalities (like clicks, fill-in inputs, …) when you describe a behaviour. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;cucumber&quot;&gt;&lt;span class=&quot;c&quot;&gt;#### Bad&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;Feature:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt; Testimonials&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Background:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;    Given &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I go the login page &lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I fill in email with john@doe.com&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I fill in password with &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1234&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I click the submit button&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Scenario:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt; Create a new testimonial with valid data&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;    Given &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I go to the new testimonials page&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I fill in body with &amp;#39;Cool App dude!&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I click the submit button&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I log in as an admin&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I go the testonial page&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I approve the testimonial&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    …&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    ZZzzzzzzz&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#### Good&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;Feature:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt; Testimonials&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Background:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;    Given &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I am logged in&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Scenario:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt; Create a new testimonial with valid data&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;    When &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I go to the new testimonials page&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I submit the form&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;it is approved by an admin&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Then &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I should see the testimonial on the index page&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then you do all the capybara, phantomjs magic in your steps file. You get the thing …&lt;/p&gt;
+
+&lt;h3 id=&quot;zeus&quot;&gt;Zeus&lt;/h3&gt;
+
+&lt;p&gt;In order to gain some time when writing code that incrementely make the tests pass, I’using &lt;a href=&quot;https://github.com/burke/zeus&quot;&gt;Zeus&lt;/a&gt; to preload the rails environement or more technically: Zeus is a language-agnostic application checkpointer for non-multithreaded applications. That in addition to &lt;a href=&quot;http://livereload.com/&quot;&gt;Livereload&lt;/a&gt; is a must!&lt;/p&gt;
+
+&lt;h2 id=&quot;continuous-integration-codeship-to-the-rescue&quot;&gt;Continuous Integration: CodeShip to the rescue&lt;/h2&gt;
+
+&lt;p&gt;As your test suite grows you don’t want to wait all the tests to pass locally before comitting something. So that’s where Codeship becomes a very useful tool. &lt;/p&gt;
+
+&lt;p&gt;As you develop a new feature:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git flow feature start awesome_feature
+zeus start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;write your feature specific specs&lt;/li&gt;
+  &lt;li&gt;write the code to make the feature specific tests pass&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git commit -am &lt;span class=&quot;s2&quot;&gt;&amp;quot;Fix the tests&amp;quot;&lt;/span&gt;
+git flow feature finish awesome_feature // which will nmerge it back to dev
+git push // make sure develop has a deployment method to a staging server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;check if the full test suite passes in codeship and send staging server to user-testing or client for getting feedback&lt;/li&gt;
+  &lt;li&gt;fix the eventual bugs until the tests are all green&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git flow release start new_set_of_features // so you get the version tag and all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;you can still do some commit at this point&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git flow release finish new_set_of_features
+git push&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;let the test run on Codeship.&lt;/li&gt;
+  &lt;li&gt;let Codeship deploy for you.&lt;/li&gt;
+  &lt;li&gt;grab a beer, celebrate!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;Continuous integration really makes it easy to find out which commit broke your app and quickly revert your code to the previous one. Also, If you work using git-flow you can create realease branches, test them and deploy them separately, allowing you to make last fixes while other developpers can continue working on new stuff.&lt;/p&gt;
+
+&lt;p&gt;Suppose you have a full test suite, you get warnings of conflicting changes much more early in the release process. That practically gives you an almost always stable branch for staging demos, releases …&lt;/p&gt;
+
+&lt;p&gt;I could also immagine that at some point, CI could be integrated with some kind of quality tools like &lt;a href=&quot;https://codeclimate.com&quot;&gt;Code Climate&lt;/a&gt; and make the tests fail if the code quality drops under a certain rating.&lt;/p&gt;
+
+</description>
+				<pubDate>Tue, 10 Sep 2013 00:00:00 +0200</pubDate>
+				<link>http://www.rorsvort.com/blog/2013/09/10/testing_at_emuzikos.html</link>
+				<guid isPermaLink="true">http://www.rorsvort.com/blog/2013/09/10/testing_at_emuzikos.html</guid>
+			</item>
+		
+	</channel>
+</rss>
