@@ -1,4 +1,4 @@
-{% if page.previous || page.next %}
+{% if page.previous or page.next %}
   <div class="pager">
     {%if page.previous %}
       <li>
@@ -19,8 +19,8 @@
     {%if page.next %}
       <li>
         <a href="{{ page.next.url }}" title="{{ page.next.title }}" rel='tooltip'>
-          <i class="icon-right-open"></i>
           Next article
+          <i class="icon-right-open"></i>
         </a>
       </li>
     {% else %}
