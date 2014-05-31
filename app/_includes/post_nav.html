@@ -1,0 +1,35 @@
+{% if page.previous or page.next %}
+  <div class="pager">
+    {%if page.previous %}
+      <li>
+        <a href="{{ page.previous.url }}" title="{{ page.previous.title }}" rel='tooltip'>
+          <i class="icon-left-open"></i>
+          Previous article
+        </a>
+      </li>
+    {% else %}
+      <li  class="disabled">
+        <a>
+          <i class="icon-left-open"></i>
+          Previous article
+        </a>
+      </li>
+    {% endif %}
+
+    {%if page.next %}
+      <li>
+        <a href="{{ page.next.url }}" title="{{ page.next.title }}" rel='tooltip'>
+          Next article
+          <i class="icon-right-open"></i>
+        </a>
+      </li>
+    {% else %}
+      <li  class="disabled">
+        <a>
+          Next article
+          <i class="icon-right-open"></i>
+        </a>
+      </li>
+    {% endif %}
+  </div>
+{% endif %}

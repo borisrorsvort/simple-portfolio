@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'bootstrap_init';
+@import 'fontello';
+@import 'highlight';
+@import 'svg_background';
+@import 'disqus';
+
+@import 'core';
+@import 'sections/homepage';
+@import 'sections/post';
+@import 'sections/posts';
+@import 'github-badge';
+
+h1,
+h2,
+h3 {
+  margin-top: $line-height-computed * 2;
+  margin-bottom: ($line-height-computed);
+  color: lighten($text-color, 100%);
+
+  small,
+  .small {
+    font-size: 65%;
+  }
+}
+h4,
+h5,
+h6 {
+  margin-top: ($line-height-computed);
+  margin-bottom: ($line-height-computed/2);
+
+  small,
+  .small {
+    font-size: 75%;
+  }
+}
