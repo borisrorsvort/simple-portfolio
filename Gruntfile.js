@@ -166,7 +166,7 @@ module.exports = function (grunt) {
         assetsDirs: '<%= yeoman.dist %>',
       },
       html: ['<%= yeoman.dist %>/**/*.html'],
-      css: ['<%= yeoman.dist %>/css/**/*.css']
+      css: ['<%= yeoman.dist %>/**/*.css']
     },
     htmlmin: {
       dist: {
@@ -251,8 +251,8 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/js/**/*.js',
             '<%= yeoman.dist %>/css/**/*.css',
-            '<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
-            '<%= yeoman.dist %>/font/**/*.{eot*,otf,svg,ttf,woff}'
+            '<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
+            // '<%= yeoman.dist %>/font/**/*.{eot*,otf,svg,ttf,woff}'
           ]
         }]
       }
