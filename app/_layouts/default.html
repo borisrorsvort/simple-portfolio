@@ -29,16 +29,26 @@
 
   <nav class="navbar navbar-default navbar-static-top navbar-inverse" role="navigation">
     <div class="container">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="/">
-            Home
-          </a>
-        </li>
-        {% assign pages_list = site.pages %}
-        {% assign group = 'navigation' %}
-        {% include pages_list.html %}
-      </ul>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/">
+              Home
+            </a>
+          </li>
+          {% assign pages_list = site.pages %}
+          {% assign group = 'navigation' %}
+          {% include pages_list.html %}
+        </ul>
+      </div>
     </div>
   </nav>
 

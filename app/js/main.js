@@ -311,6 +311,7 @@ var InitSvg = {
         .attr("height", h)
         .attr("class", "PiYG")
         .attr('id', 'svg-bg')
+        .attr('class', 'hidden-xs hidden-sm')
         .on("mousemove", function() {
           var m = d3.svg.mouse(this);
           mouse[0] = m[0];
