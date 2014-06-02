@@ -1,64 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
-  <url>
-      <loc>http://wb.attac.be/blog/2014/04/11/simple-static-html-partials-includes-with-yeoman-and-gruntjs.html</loc>
-  </url>
+    
+    <url>
+      <loc>http://www.rorsvort.com/blog/2014/04/11/simple-static-html-partials-includes-with-yeoman-and-gruntjs.html</loc>
+      
+        <lastmod>2014-04-11T00:00:00+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
   
-  <url>
-      <loc>http://wb.attac.be/blog/2013/09/10/testing_at_emuzikos.html</loc>
-  </url>
-  
-
-  
-  
-  
-  <url>
-      <loc>http://wb.attac.be/projects/emuzikos.html</loc>
-  </url>
-  
-  
-  
-  
-  
-  <url>
-      <loc>http://wb.attac.be/feed.xml</loc>
-  </url>
-  
-  
-  
-  
-  
-  <url>
-      <loc>http://wb.attac.be/</loc>
-  </url>
+    
+    <url>
+      <loc>http://www.rorsvort.com/blog/2013/09/10/testing_at_emuzikos.html</loc>
+      
+        <lastmod>2013-09-10T00:00:00+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
   
   
+    
+    <url>
+      <loc>http://www.rorsvort.com/projects/emuzikos.html</loc>
+      
+        <lastmod>2014-06-02T09:13:13+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
   
+    
+    <url>
+      <loc>http://www.rorsvort.com/feed.xml</loc>
+      
+        <lastmod>2014-06-02T09:13:13+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
   
+    
+    <url>
+      <loc>http://www.rorsvort.com/</loc>
+      
+        <lastmod>2014-06-02T09:13:13+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
   
-  <url>
-      <loc>http://wb.attac.be/projects/</loc>
-  </url>
+    
+    <url>
+      <loc>http://www.rorsvort.com/projects/</loc>
+      
+        <lastmod>2014-06-02T09:13:13+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
   
+    
+    <url>
+      <loc>http://www.rorsvort.com/blog/</loc>
+      
+        <lastmod>2014-06-02T09:13:13+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
   
+    
+    <url>
+      <loc>http://www.rorsvort.com/projects/mycollecto.html</loc>
+      
+        <lastmod>2014-06-02T09:13:13+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
   
-  
-  
-  <url>
-      <loc>http://wb.attac.be/blog/</loc>
-  </url>
-  
-  
-  
-  
-  
-  <url>
-      <loc>http://wb.attac.be/projects/mycollecto.html</loc>
-  </url>
-  
-  
-  
-  
+    
+    <url>
+      <loc>http://www.rorsvort.com/sitemap.xml</loc>
+      
+        <lastmod>2014-06-02T09:13:13+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
   
 </urlset>
