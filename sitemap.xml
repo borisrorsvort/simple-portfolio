@@ -3,6 +3,21 @@
   
     
     <url>
+      <loc>http://www.rorsvort.com/blog/2014/09/21/lean_ux.html</loc>
+      
+        <lastmod>2014-09-21T00:00:00+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>http://www.rorsvort.com/blog/2014/04/11/simple-static-html-partials-includes-with-yeoman-and-gruntjs.html</loc>
       
         <lastmod>2014-04-11T00:00:00+02:00</lastmod>
@@ -36,7 +51,7 @@
     <url>
       <loc>http://www.rorsvort.com/projects/emuzikos.html</loc>
       
-        <lastmod>2014-06-02T09:42:29+02:00</lastmod>
+        <lastmod>2014-09-21T13:24:33+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -51,7 +66,7 @@
     <url>
       <loc>http://www.rorsvort.com/feed.xml</loc>
       
-        <lastmod>2014-06-02T09:42:29+02:00</lastmod>
+        <lastmod>2014-09-21T13:24:33+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -66,7 +81,7 @@
     <url>
       <loc>http://www.rorsvort.com/</loc>
       
-        <lastmod>2014-06-02T09:42:29+02:00</lastmod>
+        <lastmod>2014-09-21T13:24:33+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -81,7 +96,7 @@
     <url>
       <loc>http://www.rorsvort.com/projects/</loc>
       
-        <lastmod>2014-06-02T09:42:29+02:00</lastmod>
+        <lastmod>2014-09-21T13:24:33+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -96,7 +111,7 @@
     <url>
       <loc>http://www.rorsvort.com/blog/</loc>
       
-        <lastmod>2014-06-02T09:42:29+02:00</lastmod>
+        <lastmod>2014-09-21T13:24:33+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -111,7 +126,7 @@
     <url>
       <loc>http://www.rorsvort.com/projects/mycollecto.html</loc>
       
-        <lastmod>2014-06-02T09:42:29+02:00</lastmod>
+        <lastmod>2014-09-21T13:24:33+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -126,7 +141,7 @@
     <url>
       <loc>http://www.rorsvort.com/sitemap.xml</loc>
       
-        <lastmod>2014-06-02T09:42:29+02:00</lastmod>
+        <lastmod>2014-09-21T13:24:33+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

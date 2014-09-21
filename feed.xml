@@ -7,6 +7,175 @@
 		<atom:link href="http://www.rorsvort.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Change from a culture of shipping to a culture of learning</title>
+				<description>&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+
+&lt;p&gt;Before going to the &lt;a href=&quot;http://leanuxfest.be/&quot;&gt;LeanUxFest&lt;/a&gt; conference, I did not think LeanUx was going to trigger such a shift in my mind.
+I was struggling for month to resolve internal disagreements about the design process in an agile environment.&lt;/p&gt;
+
+&lt;p&gt;The main concern is that agile is brainless, it solely focuses on collaboration and delivering feature.
+It doesn’t always take the time to ask himself the question: “&lt;a href=&quot;http://www.andersramsay.com/2012/04/24/agile-ux-vs-lean-ux/&quot;&gt;Are we making the right things?&lt;/a&gt;”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cl.ly/image/3X3e2b1K1b35/Screen%20Shot%202014-09-19%20at%205.16.57%20PM.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&quot;http://www.andersramsay.com/2012/04/24/agile-ux-vs-lean-ux/&quot;&gt;source&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Amazon can ship in 11,6 sec but has this sensing layer that allows him to roll-back if the kpi’s are going down.
+Fast delivery is great because it allows you to get quick feedback and react on it.&lt;/p&gt;
+
+&lt;p&gt;But why do you need that?
+&amp;gt; Yesterday assumption dont work with todays realities&lt;/p&gt;
+
+&lt;p&gt;Between Roadmaps, features, useless meetings, funding rounds, strategy shifts, … how do you start learning from your customers and measure success? Here are my notes and thoughts compiled for you.&lt;/p&gt;
+
+&lt;h2 id=&quot;maximizing-creativity-and-learnings-from-the-product&quot;&gt;Maximizing creativity and learnings from the product&lt;/h2&gt;
+
+&lt;p&gt;Nowadays, every company that as a bit of scale is a software company. Even the New York Times switched to be a software company that delivers high quality journalism content instead of journalistic company with an online presence. &lt;a href=&quot;http://mashable.com/2014/05/16/full-new-york-times-innovation-report/&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And every software company that need to scale need to think about creating a &lt;strong&gt;global learning culture instead of creating individual silos&lt;/strong&gt;. In return it will help the team to make &lt;strong&gt;evidence based making decisions&lt;/strong&gt; and improve the global quality of the product.&lt;/p&gt;
+
+&lt;p&gt;Many time we assume the projects managers or cto’s know best but in reality we never know how it’s going to end up.
+The idea is to quicker validate our assumptions so that it can drive our future decisions. The more swings you take at a problem, the better.&lt;/p&gt;
+
+&lt;h2 id=&quot;focus-on-the-problems-and-not-the-features&quot;&gt;Focus on the problems and not the features&lt;/h2&gt;
+
+&lt;p&gt;From Jeff Gothelf talk the 5 steps to achieve that should be:&lt;/p&gt;
+
+&lt;h3 id=&quot;the-anatomy-of-the-team&quot;&gt;The Anatomy of the team&lt;/h3&gt;
+
+&lt;p&gt;Thinks to avoid:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;creating silos (it limits the creativity of the team and prevents collective decisions and learnings)&lt;/li&gt;
+  &lt;li&gt;working with service providers (because they don’t own the product, they don’t care as much)&lt;/li&gt;
+  &lt;li&gt;having no view on the “whole”&lt;/li&gt;
+  &lt;li&gt;having no collaboration&lt;/li&gt;
+  &lt;li&gt;tasking people based on their availability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All that leads to less team cohesion, frustration, product quality and less productivity.&lt;/p&gt;
+
+&lt;p&gt;Solutions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;small team (6-8 people)&lt;/li&gt;
+  &lt;li&gt;co-location (if not possible, be awake at the same time)&lt;/li&gt;
+  &lt;li&gt;dedicated (everybody work on the same project)&lt;/li&gt;
+  &lt;li&gt;self sufficient (you need the skills but not the roles!!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-do-we-task-the-team&quot;&gt;How do we task the team&lt;/h3&gt;
+
+&lt;p&gt;Thinks to avoid:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Roadmaps (fixed time and fixed scope often makes the deadline move, reduces the scope or makes you work crazy hours)&lt;/li&gt;
+  &lt;li&gt;Annual budget process (as we had any idea of what’s gonna happen)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Solutions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;create documents with active initiatives, revisit priorities along the way&lt;/li&gt;
+  &lt;li&gt;Task the team to achieve business outcome&lt;/li&gt;
+  &lt;li&gt;get granular (the agile way)&lt;/li&gt;
+  &lt;li&gt;give the team a problem to solve not a solution to implement&lt;/li&gt;
+  &lt;li&gt;let the team own the solution (stategic and tactical kpis)&lt;/li&gt;
+  &lt;li&gt;have a incremental funding company structure (small chunks of reliable funding)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If the measure of success is features, the product becomes bloated
+Roadmap should be a list of questions not features!
+Features on their own are not a measure of success&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;how-should-we-work&quot;&gt;How should we work&lt;/h3&gt;
+
+&lt;p&gt;Thinks to avoid:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;having no cross functional collaboration (you &lt;strong&gt;should&lt;/strong&gt; have)&lt;/li&gt;
+  &lt;li&gt;fixation on job titles (that limits the creativity of the team)&lt;/li&gt;
+  &lt;li&gt;fear of failure (then people tend to do just enough to not get fired)&lt;/li&gt;
+  &lt;li&gt;arbitrary deadlines&lt;/li&gt;
+  &lt;li&gt;no culture of ownership (cover your ass)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;change-how-the-team-works&quot;&gt;Change how the team works:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;take smaller risks&lt;/li&gt;
+  &lt;li&gt;usually agile doesn’t have a brain -&amp;gt; implement a learning brain to agile&lt;/li&gt;
+  &lt;li&gt;works as designed is not enough (you have to focus on QA and change it if people can’t use it)&lt;/li&gt;
+  &lt;li&gt;clear definition of success&lt;/li&gt;
+  &lt;li&gt;promote competencies over roles&lt;/li&gt;
+  &lt;li&gt;self organizing team (let the team figure out how they work best together)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;why-should-you-invest-for-this-culture-of-innovation&quot;&gt;Why should you invest for this culture of innovation&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;its gonna make your customers happy&lt;/li&gt;
+  &lt;li&gt;reducing waste by building successful product&lt;/li&gt;
+  &lt;li&gt;increasing employee’s morale&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You must transform from a culture of delivery to a culture of learning&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
+
+&lt;p&gt;They are multiple tools at our disposal to collaboratively iterate over design considerations:&lt;/p&gt;
+
+&lt;h3 id=&quot;empathy-map&quot;&gt;Empathy map&lt;/h3&gt;
+
+&lt;p&gt;Empathy Mapping helps us consider how other people are thinking and feeling. Its a quick way to enters into the head of our users and consider the problems they have while using our products. It’s stimulates teams to find innovative solutions while building knowledge about our clients. (&lt;a href=&quot;http://www.cooper.com/journal/2014/05/persona-empathy-mapping&quot;&gt;source&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h3 id=&quot;the-6-8-5&quot;&gt;The 6-8-5&lt;/h3&gt;
+
+&lt;p&gt;This sketch-boarding technique called the 6-8-5 method asked team members to produce 6-8 sketches in 5 minutes.
+By limiting the time frame, this force us to focus on the essential. (&lt;a href=&quot;http://www.quora.com/Why-does-Adaptive-Path-say-that-sketching-a-design-should-take-5-minutes-and-6-iterations&quot;&gt;source&lt;/a&gt;)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;One of the most important aspect about leanUx is to create ownership&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;facts-checking-map-post-it-board&quot;&gt;Facts checking map (post-it board)&lt;/h3&gt;
+
+&lt;p&gt;In order to evaluate and prioritize our assumptions and facts while exploring a problem, it is useful to draw a big line on a board and organize the post-it from ‘not true’ to ‘true’ (make sure true statements have evidence to support them).&lt;/p&gt;
+
+&lt;p&gt;Not sure &amp;lt;—————————————–&amp;gt; True (with evidence)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Do less More often to do More&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;mapping-problem-to-personnas&quot;&gt;Mapping Problem to personnas&lt;/h3&gt;
+
+&lt;p&gt;Make a collective brainstorm and define :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What is our goal&lt;/li&gt;
+  &lt;li&gt;What is the problem hypothesis&lt;/li&gt;
+  &lt;li&gt;What is it we want  to learn&lt;/li&gt;
+  &lt;li&gt;What are our assumption?&lt;/li&gt;
+  &lt;li&gt;Which assumptions can, once proven false, invalidate all others?&lt;/li&gt;
+  &lt;li&gt;What is the minimum we can build to learn?&lt;/li&gt;
+  &lt;li&gt;What is the measure of success?&lt;/li&gt;
+  &lt;li&gt;Get out of the building and talk to people.&lt;/li&gt;
+  &lt;li&gt;build mvp without full fledge backend, do experiments and measure results.&lt;/li&gt;
+  &lt;li&gt;keep track of feature release date to match with analytics insights / pikes
+&amp;gt; Minimize efforts and maximize learning&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Sun, 21 Sep 2014 00:00:00 +0200</pubDate>
+				<link>http://www.rorsvort.com/blog/2014/09/21/lean_ux.html</link>
+				<guid isPermaLink="true">http://www.rorsvort.com/blog/2014/09/21/lean_ux.html</guid>
+			</item>
+		
+			<item>
 				<title>Simple static html partials includes with yeoman and grunt.js</title>
 				<description>&lt;p&gt;So you have this typical static site built with &lt;a href=&quot;http://&quot;&gt;Yeoman&lt;/a&gt;. You probably duplicated your layout for each of the pages you sites contains. So you probably wondered how to actually include some partials and DRY up these pages.&lt;/p&gt;
 
@@ -112,6 +281,7 @@
   &lt;span class=&quot;c&quot;&gt;&amp;lt;!--(bake includes/sidebar.html)--&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;c&quot;&gt;&amp;lt;!--(bake includes/main-content.html)--&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 </description>
 				<pubDate>Fri, 11 Apr 2014 00:00:00 +0200</pubDate>
 				<link>http://www.rorsvort.com/blog/2014/04/11/simple-static-html-partials-includes-with-yeoman-and-gruntjs.html</link>
