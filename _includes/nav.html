@@ -1,0 +1,13 @@
+{% assign pages = site.pages | where:"menu", true | sort:"weight"  %}
+<ul class="list-reset center uppercase p2">
+  <li class="inline">
+    <a href="{{ site.baseurl | append: '/' }}" class="btn light">Home</a>
+  </li>
+  {% for p in pages %}
+    <li class="inline">
+      <a class="btn light {%if p.url == page.url %}muted{% endif %}" href="{{ p.url | prepend: site.baseurl }}">
+        {{ p.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

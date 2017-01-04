@@ -1,0 +1,30 @@
+---
+title: Blog
+permalink: articles
+layout: page
+menu: true
+weight: 4
+background: green
+---
+
+<header class="center mb2 uppercase white">
+  <img src="{{ '/assets/images/hexagone.svg' | prepend: site.baseurl }}" alt="" class="fadeInDown animated  title-icon--circle">
+  <h1>{{ page.title }}</h1>
+</header>
+
+<section class="col-6 mx-auto">
+  {% for post in site.posts %}
+    <article class="py3">
+      <strong class="uppercase h6 muted" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </strong>
+      <a class="block text-decoration-none" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
+        <h3 class="mt0" itemprop="name">{{ post.title }}</h3>
+      </a>
+      <p class="muted" itemprop="description">{{ post.content | strip_html | truncatewords: 30 }}</p>
+      <a class="block" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
+        <span>Read More</span>
+      </a>
+    </article>
+  {% endfor %}
+</section>

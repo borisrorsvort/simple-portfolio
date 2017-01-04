@@ -1,0 +1,11 @@
+@media (min-width: 52em) {
+  .project__thumbnail {
+    position: relative;
+    right: 0;
+    max-width: 200px;
+    overflow: visible;
+    img {
+      max-width: none;
+    }
+  }
+}

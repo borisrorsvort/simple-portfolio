@@ -1,0 +1,42 @@
+# Site settings
+email: 'boris@rorsvort.com'
+baseurl: ''
+paginate: 5
+paginate_path: "/blog/page-:num"
+google_analytics: UA-2826331-18
+
+# SEO settings
+title: Boris Rorsvort — Ux Designer and full stack Rails / Js developper
+description: Web applications, team processes & teach code. Startup McGyver based in Brussels, Belgium
+url: https://borisrorsvort.github.io
+twitter_username: borisrorsvort
+default_img:
+
+# Profile settings
+name: Boris Rorsvort
+
+social:
+  github: https://github.com/borisrorsvort
+  dribbble: https://dribbble.com/borisrorsvort
+
+# Build settings
+# include: ["_categories", "_projects"]
+exclude: ["Gemfile", "Gemfile.lock"]
+markdown: kramdown
+
+collections:
+  projects:
+
+defaults:
+  - scope:
+      type: projects
+    values:
+      categories: []
+      thumbnail: ''
+
+# Sass
+sass:
+  style: compressed
+
+# Gems
+gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]

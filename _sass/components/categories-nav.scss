@@ -1,0 +1,38 @@
+.categories-nav__item {
+  text-decoration: none;
+  transition: all .1s linear;
+  position: relative;
+  overflow: hidden;
+  &:hover .categories-nav__item__icon {
+    left: -115px;
+    opacity: .3;
+  }
+
+  .h1, .h4 {
+    margin: 0 !important;
+  }
+}
+
+.categories-nav__item__icon {
+  position: absolute;
+  left: -125px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg) scale(.8);;
+  transition: all .2s linear;
+}
+
+.categories-nav__item--red {
+  background-color: $red;
+}
+
+.categories-nav__item--yellow {
+  background-color: $yellow;
+}
+
+.categories-nav__item--blue {
+  background-color: $blue;
+}
+
+.categories-nav__item--green {
+  background-color: $green;
+}

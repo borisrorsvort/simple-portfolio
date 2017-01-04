@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% include nav.html %}
+
+<article class="px2 mb4" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="center mb4 uppercase col-12 md-col-10 mx-auto">
+    <h1 itemprop="name headline">{{ page.title }}</h1>
+    <div class="mb2">–</div>
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+  </header>
+
+  <section itemprop="articleBody" class="col-12 md-col-6 mx-auto">
+    {{ content }}
+  </section>
+</article>
+
+{% if page.previous.url %}
+  <section class="col-12 px2 md-col-8 mx-auto py4 border-top center">
+    <a href="{{page.previous.url | prepend: site.baseurl }}" class="btn btn-primary">
+      Read Next: {{page.previous.title}}
+    </a>
+  </section>
+{% endif %}

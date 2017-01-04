@@ -1,0 +1,7 @@
+<ul class='categories-list list-reset inline'>
+  {% for cat in include.categories %}
+    <li class="inline mr2">
+      {% include cat-pill.html category=cat %}
+    </li>
+  {% endfor %}
+</ul>

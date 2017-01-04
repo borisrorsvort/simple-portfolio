@@ -1,0 +1,17 @@
+<article class="mb4 md-flex">
+  <div class="project__body md-mr3">
+    <header>
+      <h3>{{ include.project.title }}</h3>
+      {% if include.project.href %}
+        <a href="{{include.project.href}}" class="project__link white block py2 mb1">{{include.project.href}}</a>
+      {% endif %}
+    </header>
+    {{include.project.content}}
+    {% include categories-list.html categories=include.project.categories %}
+  </div>
+  {% if include.project.thumbnail.size > 0 %}
+    <div class="project__thumbnail">
+      <img src="{{ include.project.thumbnail | prepend: '/' | prepend: site.baseurl }}" alt="{{include.project.title | append: ' thubnail'}}">
+    </div>
+  {% endif %}
+</article>

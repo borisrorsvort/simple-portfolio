@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="bg-{{page.background}} animated fadeIn">
+    {{ content }}
+
+    <footer class="center p2">
+      <a href="mailto:{{site.email}}" class="inline-block mr2 btn h6 py0 px1">Email</a>
+      <a href="{{site.twitter_username | prepend: 'https://twitter.com/'}}"  class="inline-block mr2 btn h6 py0 px1">Twitter</a>
+      <a href="{{site.twitter_username | prepend: 'https://github.com/'}}"  class="inline-block btn h6 py0 px1">Github</a>
+    </footer>
+  </body>
+
+</html>

@@ -1,0 +1,30 @@
+<svg width="383" height="128" viewBox="0 0 383 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>hexagone</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-7938 -459)" figma:type="canvas">
+<g id="hexagone" style="mix-blend-mode:normal;" figma:type="frame">
+<mask id="mask0_alpha" mask-type="alpha">
+<g id="Rectangle 2" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path0_fill" transform="translate(7919 459)" fill="url(#paint0_linear)" style="mix-blend-mode:normal;"/>
+</g>
+</mask>
+<g id="Star" style="mix-blend-mode:normal;" opacity="0.5" mask="url(#mask0_alpha)" figma:type="star">
+<mask id="mask1_outline_ins">
+<use xlink:href="#path1_fill" fill="white" transform="matrix(1 0 0 -1 7938 587)"/>
+</mask>
+<g mask="url(#mask1_outline_ins)">
+<use xlink:href="#path2_stroke_2x" transform="matrix(1 0 0 -1 7938 587)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-2.52688e-13 136 -357.85 -1.26317e-12 389.425 6.08922e-13)">
+<stop offset="0.23" stop-color="#C4C4C4" stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+<path id="path0_fill" d="M 0 0L 421 0L 421 160L 0 160L 0 0Z"/>
+<path id="path1_fill" d="M 191.5 0L 326.911 56.0891L 383 191.5L 326.911 326.911L 191.5 383L 56.0891 326.911L 0 191.5L 56.0891 56.0891L 191.5 0Z"/>
+<path id="path2_stroke_2x" d="M 191.5 0L 204.894 -32.3358L 191.5 -37.8837L 178.106 -32.3358L 191.5 0ZM 326.911 56.0891L 359.247 42.6951L 353.699 29.3012L 340.305 23.7533L 326.911 56.0891ZM 383 191.5L 415.336 204.894L 420.884 191.5L 415.336 178.106L 383 191.5ZM 326.911 326.911L 340.305 359.247L 353.699 353.699L 359.247 340.305L 326.911 326.911ZM 191.5 383L 178.106 415.336L 191.5 420.884L 204.894 415.336L 191.5 383ZM 56.0891 326.911L 23.7533 340.305L 29.3012 353.699L 42.6951 359.247L 56.0891 326.911ZM 0 191.5L -32.3358 178.106L -37.8837 191.5L -32.3358 204.894L 0 191.5ZM 56.0891 56.0891L 42.6951 23.7533L 29.3012 29.3012L 23.7533 42.6951L 56.0891 56.0891ZM 178.106 32.3358L 313.517 88.4248L 340.305 23.7533L 204.894 -32.3358L 178.106 32.3358ZM 294.575 69.483L 350.664 204.894L 415.336 178.106L 359.247 42.6951L 294.575 69.483ZM 350.664 178.106L 294.575 313.517L 359.247 340.305L 415.336 204.894L 350.664 178.106ZM 313.517 294.575L 178.106 350.664L 204.894 415.336L 340.305 359.247L 313.517 294.575ZM 204.894 350.664L 69.483 294.575L 42.6951 359.247L 178.106 415.336L 204.894 350.664ZM 88.4248 313.517L 32.3358 178.106L -32.3358 204.894L 23.7533 340.305L 88.4248 313.517ZM 32.3358 204.894L 88.4248 69.483L 23.7533 42.6951L -32.3358 178.106L 32.3358 204.894ZM 69.483 88.4248L 204.894 32.3358L 178.106 -32.3358L 42.6951 23.7533L 69.483 88.4248Z"/>
+</defs>
+</svg>
