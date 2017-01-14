@@ -4,35 +4,35 @@ $breakpoint-lg: '(min-width: 64em)' !default;
 
 @mixin h1 {
   font-size: $h1 !important;
-  line-height: 1.01123596em !important;
+  // line-height: 1.01123596em !important;
   margin-top: 0.33707865em !important;
   margin-bottom: 0.6741573em !important;
 }
 
 @mixin h2 {
   font-size: $h2 !important;
-  line-height: 1.09090909em !important;
+  // line-height: 1.09090909em !important;
   margin-top: 0.54545455em !important;
   margin-bottom: 0.54545455em !important;
 }
 
 @mixin h3 {
   font-size: $h3 !important;
-  line-height: 1.76470588em !important;
+  // line-height: 1.76470588em !important;
   margin-top: 0.88235294em !important;
   margin-bottom: 0em !important;
 }
 
 @mixin h4 {
   font-size: $h4 !important;
-  line-height: 1.42857143em !important;
+  // line-height: 1.42857143em !important;
   margin-top: 1.42857143em !important;
   margin-bottom: 0em !important;
 }
 
 @mixin h5 {
   font-size: $h5;
-  line-height: 1.42857143em;
+  // line-height: 1.42857143em;
   margin-top: 1.42857143em;
   margin-bottom: 0em;
 }
