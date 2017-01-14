@@ -5,6 +5,7 @@ layout: page
 menu: true
 weight: 4
 background: green
+color: white
 ---
 
 <header class="center mb2 uppercase white">
@@ -14,15 +15,15 @@ background: green
 
 <section class="col-6 mx-auto">
   {% for post in site.posts %}
-    <article class="py3">
+    <article class="py3 white">
       <strong class="uppercase h6 muted" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">
         {{ post.date | date: "%b %-d, %Y" }}
       </strong>
-      <a class="block text-decoration-none" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
+      <a class="block text-decoration-none white" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
         <h3 class="mt0" itemprop="name">{{ post.title }}</h3>
       </a>
       <p class="muted" itemprop="description">{{ post.content | strip_html | truncatewords: 30 }}</p>
-      <a class="block" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
+      <a class="block white" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
         <span>Read More</span>
       </a>
     </article>

@@ -1,0 +1,14 @@
+.uppercase {
+  text-transform: uppercase;
+}
+
+.light {
+  font-weight: 100;
+}
+
+@media (min-width: 52em) {
+  .columize {
+    column-count: 2;
+    column-gap: 40px;
+  }
+}

@@ -1,13 +1,11 @@
-{% assign base_classes = 'btn pill bg-white black color uppercase h6 py0 px1' %}
-
 {% if cat == 'design' %}
-  {% assign classes = 'btn pill pill--red uppercase h6 py0 px1' %}
+  {% assign classes = 'btn pill red uppercase py0 px1' %}
 {% elsif  cat == 'code' %}
-  {% assign classes = 'btn pill pill--yellow uppercase h6 py0 px1' %}
+  {% assign classes = 'btn pill yellow uppercase py0 px1' %}
 {% elsif  cat == 'teaching' %}
-  {% assign classes = 'btn pill pill--blue uppercase h6 py0 px1' %}
+  {% assign classes = 'btn pill blue uppercase py0 px1' %}
 {% else %}
-  {% assign classes = 'btn pill pill--white uppercase h6 py0 px1' %}
+  {% assign classes = 'btn pill gray uppercase py0 px1' %}
 {% endif %}
 
 <a href="{{cat}}" class="{{classes}}">

@@ -1,0 +1,32 @@
+{
+  "name": "basscss-sass",
+  "homepage": "https://github.com/basscss/basscss-sass",
+  "authors": [
+    "Brent Jackson <jacksonblack@gmail.com>"
+  ],
+  "description": "Transpiled Basscss Sass partials",
+  "main": "scss/basscss.scss",
+  "keywords": [
+    "basscss",
+    "css",
+    "oocss",
+    "sass"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "48212a612e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "48212a612efaa913599bbd273724622a00e0a7f4"
+  },
+  "_source": "https://github.com/basscss/basscss-sass.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/basscss/basscss-sass.git"
+}

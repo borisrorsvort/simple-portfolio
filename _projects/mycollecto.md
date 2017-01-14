@@ -7,4 +7,4 @@ categories:
 - code
 - design
 ---
-This is a Ember [SPA](https://en.wikipedia.org/wiki/Single-page_application) built to locate the closest collective taxi points in Brussels. Back then you had to search though a pdf provided by the city. So we created an app for that!
+This is a Ember <a href="https://en.wikipedia.org/wiki/Single-page_application" class="white">SPA</a> built to locate the closest collective taxi points in Brussels. Back then you had to search though a pdf provided by the city. So we created an app for that!

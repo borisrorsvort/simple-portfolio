@@ -1,0 +1,38 @@
+h1, .h1 {
+  font-size: $h1;
+  line-height: 1.01123596em;
+  margin-top: 0.33707865em;
+  margin-bottom: 0.6741573em;
+}
+
+h2, .h2 {
+  font-size: $h2;
+  line-height: 1.09090909em;
+  margin-top: 0.54545455em;
+  margin-bottom: 0.54545455em;
+}
+
+h3, .h3 {
+  font-size: $h3;
+  line-height: 1.76470588em;
+  margin-top: 0.88235294em;
+  margin-bottom: 0em;
+}
+
+h4, .h4 {
+  font-size: $h4;
+  line-height: 1.42857143em;
+  margin-top: 1.42857143em;
+  margin-bottom: 0em;
+}
+
+h5, .h5 {
+  font-size: $h5;
+  line-height: 1.42857143em;
+  margin-top: 1.42857143em;
+  margin-bottom: 0em;
+}
+
+h4, h5, h6 {
+  opacity: .7;
+}
