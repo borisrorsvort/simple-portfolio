@@ -1,38 +1,73 @@
-h1, .h1 {
-  font-size: $h1;
-  line-height: 1.01123596em;
-  margin-top: 0.33707865em;
-  margin-bottom: 0.6741573em;
+$breakpoint-sm: '(min-width: 40em)' !default;
+$breakpoint-md: '(min-width: 52em)' !default;
+$breakpoint-lg: '(min-width: 64em)' !default;
+
+@mixin h1 {
+  font-size: $h1 !important;
+  line-height: 1.01123596em !important;
+  margin-top: 0.33707865em !important;
+  margin-bottom: 0.6741573em !important;
 }
 
-h2, .h2 {
-  font-size: $h2;
-  line-height: 1.09090909em;
-  margin-top: 0.54545455em;
-  margin-bottom: 0.54545455em;
+@mixin h2 {
+  font-size: $h2 !important;
+  line-height: 1.09090909em !important;
+  margin-top: 0.54545455em !important;
+  margin-bottom: 0.54545455em !important;
 }
 
-h3, .h3 {
-  font-size: $h3;
-  line-height: 1.76470588em;
-  margin-top: 0.88235294em;
-  margin-bottom: 0em;
+@mixin h3 {
+  font-size: $h3 !important;
+  line-height: 1.76470588em !important;
+  margin-top: 0.88235294em !important;
+  margin-bottom: 0em !important;
 }
 
-h4, .h4 {
-  font-size: $h4;
-  line-height: 1.42857143em;
-  margin-top: 1.42857143em;
-  margin-bottom: 0em;
+@mixin h4 {
+  font-size: $h4 !important;
+  line-height: 1.42857143em !important;
+  margin-top: 1.42857143em !important;
+  margin-bottom: 0em !important;
 }
 
-h5, .h5 {
+@mixin h5 {
   font-size: $h5;
   line-height: 1.42857143em;
   margin-top: 1.42857143em;
   margin-bottom: 0em;
 }
 
+h1, .h1 { @include h1; }
+h2, .h2 { @include h2; }
+h3, .h3 { @include h3; }
+h4, .h4 { @include h4; }
+h5, .h5 { @include h5; }
+
 h4, h5, h6 {
   opacity: .7;
+}
+
+
+@media #{$breakpoint-sm} {
+  .sm-h1 { @include h1; }
+  .sm-h2 { @include h2; }
+  .sm-h3 { @include h3; }
+  .sm-h4 { @include h4; }
+  .sm-h5 { @include h5; }
+}
+
+@media #{$breakpoint-md} {
+  .md-h1 { @include h1; }
+  .md-h2 { @include h2; }
+  .md-h3 { @include h3; }
+  .md-h4 { @include h4; }
+  .md-h5 { @include h5; }
+}
+
+@media #{$breakpoint-lg} {
+  .lg-h1 { @include h1; }
+  .lg-h2 { @include h2; }
+  .lg-h3 { @include h3; }
+  .lg-h4 { @include h4; }
+  .lg-h5 { @include h5; }
 }
