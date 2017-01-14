@@ -13,7 +13,7 @@ color: white
   <h1>{{ page.title }}</h1>
 </header>
 
-<section class="col-6 mx-auto">
+<section class="col-12 px2 md-col-8 mx-auto">
   {% for post in site.posts %}
     <article class="py3 white">
       <strong class="uppercase h6 muted" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">
