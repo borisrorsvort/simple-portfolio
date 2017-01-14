@@ -4,16 +4,20 @@
 
 html {
   font-size: 21px;
-  line-height: 30px;
+  // line-height: 30px;
 }
 
 body {
   font-family: 'Open sans', sans-serif;
   font-size: 1em;
-  line-height: 1.42857143em;
+  line-height: 1.5;
   margin: auto;
   font-weight: 300;
   overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
 }
 
 p, ul, ol, pre, table, blockquote {
