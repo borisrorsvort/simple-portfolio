@@ -3,7 +3,6 @@ title: How I moved my clients from wordpress to jekyll
 date: '2017-01-15 11:11:18'
 categories:
 - blog
-layout: post
 ---
 What is wordpress?
 
