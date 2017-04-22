@@ -78,9 +78,6 @@ Adds tons of features to make Atom an even better Markdown/AsciiDoc editor!
 
 Works great with static blogging as well. Try it with Jekyll, Octopress, Hexo or any of your favorite static blog engines.
 
-**[tool-bar-markdown-writer](https://atom.io/packages/tool-bar-markdown-writer)**
-
-A tool-bar plugin that adds Markdown editing actions.
 
  **[toggle-markdown-task](https://atom.io/packages/toggle-markdown-task)**
 
