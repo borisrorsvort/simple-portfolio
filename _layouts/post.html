@@ -6,7 +6,7 @@ layout: default
 
 <article class="px2 mb4" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="center mb4 uppercase col-12 md-col-10 mx-auto">
-    <h1 itemprop="name headline">{{ page.title }}</h1>
+    <h1 itemprop="name" class="post-header">{{ page.title }}</h1>
     <div class="mb2">–</div>
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
   </header>
