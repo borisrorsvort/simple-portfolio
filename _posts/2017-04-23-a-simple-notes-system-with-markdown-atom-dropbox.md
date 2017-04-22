@@ -59,7 +59,7 @@ There are mainly 4 parts that you should be concerned with:
 4. **The exporting/sync part:** You want to find a way to keep all this sync between all your devices or share it to world.
 
 
-### So here is the list of packages you will need to replicate my setup for markdown:
+So here is the list of packages you will need to replicate my setup for markdown:
 
 
 **[language-markdown](https://atom.io/packages/language-markdown)**
