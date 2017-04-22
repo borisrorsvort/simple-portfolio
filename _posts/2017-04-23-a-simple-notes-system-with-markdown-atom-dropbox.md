@@ -13,13 +13,13 @@ comments: true
 
 Since my child is born, I realised many things. And one of them is how much time and energy are precious resources. For example, you don’t get to have so much time anymore to take care of you digital life. This can potentially have bad consequences.
 
-And as thing starts to pile up like disorganised notes, unsorted pictures,… you start growing a fear that at some point, something is gonna happen and some things will get lost. If you’re using 3rd party software or services, one of these things could be that the service shuts down and you need to transfer it to something else.
+And as things start to pile up like disorganised notes, unsorted pictures,… you start growing a fear that at some point, something is gonna happen and some things will get lost. If you’re using 3rd party softwares or services, one of these things could be due to one of the services shuting down and suddenly you need to transfer all the files to somewhere else.
 
 <blockquote>
 <p>So the challenge is to find systems to organise you life that are <strong>portable</strong>, easy &amp; <strong>enjoyable</strong> to use and that don’t require too much <strong>maintenance</strong>.</p>
 </blockquote>
 
-As I have less time to take care of all that, I try to simplify all my processes and think about how can it survive the years.
+As I have less time to take care of all that, I try to simplify all my processes and think about how can they can survive the years.
 
 By the way, this is quite hard for me as I’m quite a «tool freak».
 
@@ -27,15 +27,15 @@ By the way, this is quite hard for me as I’m quite a «tool freak».
 ## Atom & Markdown to the rescue
 
 
-As I’m a programmer, I’m using Atom everyday for my work. So I told myself that it would be actually silly not to use it to read and write all the notes I could have taken in the past.
+As I’m a programmer, I use Atom everyday for my work. So I told myself that it would be actually silly not to use it to read and write all the notes I could have taken in the past.
 
 
-I used be a heady Evernote user back in days until they announced their new pricing model. Then I switched to Synology Notes, partly because they had an import script from Evernote.
+I used be a heavy Evernote user back in days until they announced their new pricing model. Then I switched to Synology Notes, partly because they had an import script from Evernote.
 
 
 Now I still haven’t found a great way to transfer the old notes (hence my current portability concerns) but I started to experiment with Atom to write the new ones.
 
-When you work in a raw text environment, the easiest way to write decent notes is to use markdown. Also you have a ton of markdown editors on the market, so event if Atom dies, I’ll probably find something to replace it.
+When you work in a raw text environment, the easiest way to write decent notes is to use markdown. Also you have a ton of markdown editors on the market, so even if Atom dies, I’ll probably find something to replace it.
 
 
 Now **Markdown** has little support in Atom by default but there are a great bunch of plugin that make it much better.
@@ -52,11 +52,11 @@ There are mainly 4 parts that you should be concerned with:
 
 1. **The writing experience:** Is the syntax highlighting good enough to quickly scan the page? Are they snippets to make you write faster?
 
-1. **The previewing part:** Sometime, you really need to see how the text is gonna look. Also useful when writing markdown slides.
+2. **The previewing part:** Sometime, you really need to see how the text is gonna look. Also useful when writing markdown slides.
 
-1. **Navigating / searching:** This goes without saying. Though I haven’t experimented with a lot heavy files, Code repos have a lot of them and the experience is pretty fast.
+3. **Navigating / searching:** This goes without saying. Though I haven’t experimented with a lot heavy files, Code repos have a lot of them and the experience is pretty fast.
 
-1. **The exporting/sync part:** You want to find a way to keep all this sync between all your devices or share it to world.
+4. **The exporting/sync part:** You want to find a way to keep all this sync between all your devices or share it to world.
 
 
 So here are the list of packages you will need to replicate my setup for markdown:
