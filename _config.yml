@@ -28,6 +28,11 @@ defaults:
     values:
       categories: []
       thumbnail: ''
+  - scope:
+      type: posts
+    values:
+      layout: post
+      categories: [blog]
 
 # Sass
 sass:
