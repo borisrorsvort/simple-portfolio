@@ -6,8 +6,15 @@ categories:
 comments: true
 ---
 
+
+##![]({{ site.baseurl }}/assets/images/Screen%20Shot%202017-04-21%20at%2023.01.25.png)
+
 ## The fear of death
+
 
 ## One tool to rule them all
 
+
 ## The setup
+
+
