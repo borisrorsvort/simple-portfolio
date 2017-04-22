@@ -31,8 +31,7 @@ defaults:
   - scope:
       type: posts
     values:
-      layout: post
-      categories: [blog]
+      categories: ['blog']
 
 # Sass
 sass:
