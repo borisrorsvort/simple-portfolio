@@ -7,48 +7,35 @@ comments: true
 ---
 ![]({{ site.baseurl }}/assets/images/Screen%20Shot%202017-04-21%20at%2023.01.25.png)
 
-
 ## The fear
-
 
 Since my child is born, I realised many things. And one of them is how much time and energy are precious resources. For example, you don’t get to have so much time anymore to take care of you digital life. This can potentially have bad consequences.
 
 And as things start to pile up like disorganised notes, unsorted pictures,… you start growing a fear that at some point, something is gonna happen and some things will get lost. If you’re using 3rd party softwares or services, one of these things could be due to one of the services shuting down and suddenly you need to transfer all the files to somewhere else.
 
-<blockquote>
-<p>So the challenge is to find systems to organise you life that are <strong>portable</strong>, easy &amp; <strong>enjoyable</strong> to use and that don’t require too much <strong>maintenance</strong>.</p>
-</blockquote>
+> So the challenge is to find systems to organise you life that are **portable, easy &amp; enjoyable** to use and that don’t require too much **maintenance**.
 
 As I have less time to take care of all that, I try to simplify all my processes and think about how can they can survive the years.
 
 By the way, this is quite hard for me as I’m quite a «tool freak».
 
-
 ## Atom & Markdown to the rescue
-
 
 As I’m a programmer, I use Atom everyday for my work. So I told myself that it would be actually silly not to use it to read and write all the notes I could have taken in the past.
 
-
 I used be a heavy Evernote user back in days until they announced their new pricing model. Then I switched to Synology Notes, partly because they had an import script from Evernote.
-
 
 Now I still haven’t found a great way to transfer the old notes (hence my current portability concerns) but I started to experiment with Atom to write the new ones.
 
 When you work in a raw text environment, the easiest way to write decent notes is to use markdown. Also you have a ton of markdown editors on the market, so even if Atom dies, I’ll probably find something to replace it.
 
-
 Now **Markdown** has little support in Atom by default but there are a great bunch of plugin that make it much better.
-
 
 I experimented with all of them and ended up with a selection of what I believe are the most convenient. You will probably have a different setup than mine. That’s totally ok and This why I love Atom.
 
-
 ## The setup
 
-
 There are mainly 4 parts that you should be concerned with:
-
 
 1. **The writing experience:** Is the syntax highlighting good enough to quickly scan the page? Are they snippets to make you write faster?
 
@@ -58,19 +45,15 @@ There are mainly 4 parts that you should be concerned with:
 
 4. **The exporting/sync part:** You want to find a way to keep all this sync between all your devices or share it to world.
 
-
 So here is the list of packages you will need to replicate my setup for markdown:
-
 
 **[language-markdown](https://atom.io/packages/language-markdown)**
 
 Basic language support
 
-
 **[markdown-preview-enhanced](https://atom.io/packages/markdown-preview-enhanced)**
 
 For better previewer, slides generator, code highlighting, table of content generator and auto open + a million other more advanced features.
-
 
 **[markdown-writer](https://atom.io/packages/markdown-writer)**
 
@@ -78,30 +61,25 @@ Adds tons of features to make Atom an even better Markdown/AsciiDoc editor!
 
 Works great with static blogging as well. Try it with Jekyll, Octopress, Hexo or any of your favorite static blog engines.
 
-
- **[toggle-markdown-task](https://atom.io/packages/toggle-markdown-task)**
+**[toggle-markdown-task](https://atom.io/packages/toggle-markdown-task)**
 
 To mark github flavored md task as done.
 
-
- **[tool-bar-markdown-writer](https://atom.io/packages/tool-bar-markdown-writer)**
+**[tool-bar-markdown-writer](https://atom.io/packages/tool-bar-markdown-writer)**
 
 Adds a neat toolbar when too lazy to type.
 
-
- **[document-outline](https://atom.io/packages/document-outline)**
+**[document-outline](https://atom.io/packages/document-outline)**
 
 Super useful sidebar that shows you the document structure ala google docs.
-
 
 **[one-light-ui](https://atom.io/themes/one-light-ui)**
 
 A nice theme
 
- **[one-light-syntax](https://atom.io/themes/one-light-syntax)**
+**[one-light-syntax](https://atom.io/themes/one-light-syntax)**
 
 A great syntax theme. Good balance quality between code and md support.
-
 
 ## Gotchas
 
