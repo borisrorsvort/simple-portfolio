@@ -7,8 +7,7 @@ comments: true
 ---
 
 
-
-
+##![]({{ site.baseurl }}/assets/images/setup-markdown-2.jpg)
 
 ## The fear
 
@@ -133,3 +132,7 @@ For syncing I could use git but I find **dropbox** a better fit in this case, an
 
 
 If you have comments or suggestions about this setup don’t hesitate to reach out on [twitter](https://twitter.com/borisrorsvort) or [mastodon](https://mastodon.social/@borisrorsvort) :)
+
+
+
+
