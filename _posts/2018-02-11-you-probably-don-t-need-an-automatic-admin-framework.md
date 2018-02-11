@@ -4,8 +4,6 @@ categories:
 title: You probably don’t need an automatic admin framework
 date: 2018-02-11 16:12:06 +0000
 ---
-# You probably don’t need an automatic admin framework
-
 Automatic admin framework (like rails_admin, active_admin,…), or admin template (like Inspina, Forest admin,…) have been on the market for quite some time, and still have quite a bit of success. Though it can give the impression to get something running quickly without development time, it is at the expense of other things that are often mistakenly deamed less important.
 
 I will try to analye both auto admin and templates separately as they create their own sets of problems.
@@ -20,7 +18,7 @@ I will try to analye both auto admin and templates separately as they create the
 
 ### Where you fail
 
-#### Flexibility 
+#### Flexibility
 
 While the impression of «getting things done» may exist, it can quickly become a nightmare when you need to handle more complex flows, do live / async validations or create some ad-hoc ui (usability, branding, help, formatting,...).
 
@@ -31,7 +29,7 @@ I also noticed that these companies did’nt have any designers at the time, whi
 
 Unless the company is «design driven», it does not often considers admin internal users as «normal user» and disregards their needs for good interfaces (If you wonder what I mean, [check these principles](https://www.nngroup.com/articles/ten-usability-heuristics/)).
 
-As users tend to accomodate bad ui, it may seem it’s not important for them, but think about the time they loose with your bad ui and the effect on their mood on the daily work. 
+As users tend to accomodate bad ui, it may seem it’s not important for them, but think about the time they loose with your bad ui and the effect on their mood on the daily work.
 
 You can hear these poor internal users think:
 
@@ -43,7 +41,7 @@ You can hear these poor internal users think:
 
 #### The cost factor
 
-Another aspect is the **cost of change**. Automatic admin framework give you the illusion to get massive features for you money (dev time). 
+Another aspect is the **cost of change**. Automatic admin framework give you the illusion to get massive features for you money (dev time).
 What I see is that these features are rarely what will make your business successful. You often don’t need all these features.
 
 I’m claiming that building the tools you needs with just what you need will help you better react to change.
@@ -69,14 +67,14 @@ So why event starting with something like that that while you could reduce your 
 
 #### Maintainability
 
-Aside big popular css frameworks (bootstrap, foundations, material design,…), lot’s of the admin design frameworks I’ve seen are build by single individuals (some theme-forest one for example). It’s not a bad thing per se, but you expose yourself to many potential maintainability issues: 
+Aside big popular css frameworks (bootstrap, foundations, material design,…), lot’s of the admin design frameworks I’ve seen are build by single individuals (some theme-forest one for example). It’s not a bad thing per se, but you expose yourself to many potential maintainability issues:
 
-- lack of code review that leads to bad code
-- lack of coherence or best practises
-- full package of (un)necessary features, sometimes at the expense of quality
-- lack of support
-- rare updates
-- …
+* lack of code review that leads to bad code
+* lack of coherence or best practises
+* full package of (un)necessary features, sometimes at the expense of quality
+* lack of support
+* rare updates
+* …
 
 Fixing it would cost you a lot, diverge from the base code and make potential updates even more costly.
 So you end up adding stuff on top of it, and as it’s already bad, you don’t care if your code is bad too (the broken window effect).
@@ -89,9 +87,9 @@ I remember my typography teacher telling me:
 
 Using admin css framework, or any css framework actually, never excuses you for not designing.
 
-When companies that have no «design culture» choose a css framework, they often think that it will improve their design. 
+When companies that have no «design culture» choose a css framework, they often think that it will improve their design.
 
-With the famous «it’s good enough» approach, they will choose within the components of the pre-built framework without asking themselves if that is the best way to solve their desgin problems. 
+With the famous «it’s good enough» approach, they will choose within the components of the pre-built framework without asking themselves if that is the best way to solve their desgin problems.
 
 To extend my typography teacher’s quote: «They will draw on the lines».
 
