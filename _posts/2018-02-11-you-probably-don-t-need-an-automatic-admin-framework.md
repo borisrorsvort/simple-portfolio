@@ -107,6 +107,8 @@ Build and reuse components across your products if they solve the same issues.
 
 Don’t follow the REST inspired interface because your code does, create one that match your flows.
 
-There are use cases where you will say «we had good reasons to choose it» and that’s probably true. My comments are there to make you think about the future and what kind of products you want to deliver.
+There are use cases where you will say «we had good reasons to choose it» and that’s probably true. But the cost to change will be double. 
+
+My comments are there to make you think about the future and what kind of products you want to deliver.
 
 As usual, comments and critics are welcome on twitter [@borisrorsvort](https://twitter.com/borisrorsvort)
