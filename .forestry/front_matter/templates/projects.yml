@@ -1,0 +1,13 @@
+---
+hide_body: false
+fields:
+- name: categories
+  label: Categories
+  type: tag_list
+  hidden: false
+  default: []
+- name: thumbnail
+  label: Thumbnail
+  type: text
+  hidden: false
+  default: ''
