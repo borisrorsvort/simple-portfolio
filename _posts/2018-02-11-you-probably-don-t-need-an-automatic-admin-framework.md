@@ -6,7 +6,7 @@ date: 2018-02-11 16:12:06 +0000
 ---
 Automatic admin framework (like rails_admin, active_admin,…), or admin template (like Inspina, Forest admin,…) have been on the market for quite some time, and still have quite a bit of success. Though it can give the impression to get something running quickly without development time, it is at the expense of other things that are often mistakenly deamed less important.
 
-I will try to analye both auto admin and templates separately as they create their own sets of problems.
+I will try to analyse both auto admin and templates separately as they create their own sets of problems.
 
 ## Automatic admin frameworks
 
@@ -16,7 +16,7 @@ I will try to analye both auto admin and templates separately as they create the
 * quick search and filters on resources lists
 * handling nested associations forms
 
-### Where you fail
+### Where they fail
 
 #### Flexibility
 
@@ -35,9 +35,9 @@ You can hear these poor internal users think:
 
 > sigh, I’ll have to use that form again today.
 
-> I’ll get the blame if I make a mistake, and those validations are so not useful.
+> I’ll get the blame if I make a mistake, and those validations are not so useful.
 
-> They say they’ll revamp the admin, for me it’s another ui to learn and to get used too.
+> They say they’ll revamp the admin, for me it’s another ui to learn and to get used to.
 
 #### The cost factor
 
@@ -46,14 +46,14 @@ What I see is that these features are rarely what will make your business succes
 
 I’m claiming that building the tools you needs with just what you need will help you better react to change.
 
-It will cost you less than converting the whole admin to a custom build when the automatic one doesn’t cover you needs anymore (unless you switch very early, when you don’t have too much things).
+It will cost you less than converting the whole admin to a custom build when the automatic one doesn’t cover you needs anymore (unless you switch very early, when you don’t have too many things).
 
 #### The design mindset
 
 Using automatic admins it sometimes also revealing of the lack of «Design driven mindset».
 If your product is a little bit more than a «wysiwyg», there are a lot of chances that you’ll be stuck with a «not ideal ui».
 
-So why event starting with something like that that while you could reduce your scope and deliver useful and delightful user experience from the get go?
+So why even starting with something like that while you could reduce your scope to deliver useful and delightful user experience from the get go?
 
 ## Css Admin templates
 
@@ -63,11 +63,11 @@ So why event starting with something like that that while you could reduce your 
 * provides a set of generic ui elements
 * makes you implement faster
 
-### Where you fail
+### Where they fail
 
 #### Maintainability
 
-Aside big popular css frameworks (bootstrap, foundations, material design,…), lot’s of the admin design frameworks I’ve seen are build by single individuals (some theme-forest one for example). It’s not a bad thing per se, but you expose yourself to many potential maintainability issues:
+Aside big popular css frameworks (bootstrap, foundations, material design,…), many admin design frameworks that I’ve seen are build by single individuals (some theme-forest one for example). It’s not a bad thing per se, but you expose yourself to many potential maintainability issues:
 
 * lack of code review that leads to bad code
 * lack of coherence or best practises
@@ -107,6 +107,6 @@ Build and reuse components across your products if they solve the same issues.
 
 Don’t follow the REST inspired interface because your code does, create one that match your flows.
 
-Their probably cases where you will say «we had good reasons to choose it» and that’s probably true. My comments are there to make you think about the future and what kind of products you want to deliver.
+There are use cases where you will say «we had good reasons to choose it» and that’s probably true. My comments are there to make you think about the future and what kind of products you want to deliver.
 
 As usual, comments and critics are welcome on twitter [@borisrorsvort](https://twitter.com/borisrorsvort)
