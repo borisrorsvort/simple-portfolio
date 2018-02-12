@@ -27,7 +27,7 @@ While the impression of «getting things done» may exist, it can quickly become
 I heard many times «it does what we need it to do».
 I also noticed that these companies did’nt have any designers at the time, which is imho one of the biggest problem.
 
-Unless the company is «design driven», it does not often considers admin internal users as «normal user» and disregards their needs for good interfaces (If you wonder what I mean, [check these principles](https://www.nngroup.com/articles/ten-usability-heuristics/)).
+Unless the company is «design driven», it does not often considers admin **internal users as «normal user»** and disregards their needs for good interfaces (If you wonder what I mean, [check these principles](https://www.nngroup.com/articles/ten-usability-heuristics/)).
 
 As users tend to accomodate bad ui, it may seem it’s not important for them, but think about the time they loose with your bad ui and the effect on their mood on the daily work.
 
@@ -67,7 +67,7 @@ So why even starting with something like that while you could reduce your scope 
 
 #### Maintainability
 
-Aside big popular css frameworks (bootstrap, foundations, material design,…), many admin design frameworks that I’ve seen are build by single individuals (some theme-forest one for example). It’s not a bad thing per se, but you expose yourself to many potential maintainability issues:
+Aside big popular css frameworks (bootstrap, foundations, material design,…), many admin design frameworks that I’ve seen are build by single individuals (some theme-forest one for example). It’s not a bad thing per se, but you expose yourself to many **potential maintainability issues**:
 
 * lack of code review that leads to bad code
 * lack of coherence or best practises
@@ -83,7 +83,7 @@ So you end up adding stuff on top of it, and as it’s already bad, you don’t 
 
 I remember my typography teacher telling me:
 
-> Don’t draw on graph paper, you will unconsciously want to follow the lines!
+> **Don’t draw on graph paper, you will unconsciously want to follow the lines!**
 
 Using admin css framework, or any css framework actually, never excuses you for not designing.
 
@@ -100,14 +100,14 @@ Choosing a automatic admin framework is most probably a bad idea, you’ll have 
 It’s time to stop thinking good design is a «nice to have».
 Design is as important and takes as much time as good code.
 
-Your internal users are your users as well, treat them with respect.
+**Your internal users are your users as well, treat them with respect.**
 
 Use a css framework that is well maintained, not admin framework.
 Build and reuse components across your products if they solve the same issues.
 
 Don’t follow the REST inspired interface because your code does, create one that match your flows.
 
-There are use cases where you will say «we had good reasons to choose it» and that’s probably true. But the cost to change will be double. 
+There are use cases where you will say «we had good reasons to choose it» and that’s probably true. But the cost to change will be double.
 
 My comments are there to make you think about the future and what kind of products you want to deliver.
 
