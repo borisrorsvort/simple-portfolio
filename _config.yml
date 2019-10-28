@@ -1,6 +1,6 @@
 # Site settings
-email: 'boris@rorsvort.com'
-baseurl: ''
+email: "boris@rorsvort.com"
+baseurl: ""
 paginate: 5
 paginate_path: "/blog/page-:num"
 google_analytics: UA-2826331-18
@@ -27,15 +27,16 @@ defaults:
       type: projects
     values:
       categories: []
-      thumbnail: ''
+      thumbnail: ""
   - scope:
       type: posts
     values:
-      categories: ['blog']
+      categories: ["blog"]
 
 # Sass
 sass:
+  sass_dir: _sass
   style: compressed
 
 # Gems
-gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]
+plugins: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]

@@ -1,14 +1,15 @@
 .categories-nav__item {
   text-decoration: none;
-  transition: all .1s linear;
+  transition: all 0.1s linear;
   position: relative;
   overflow: hidden;
   &:hover .categories-nav__item__icon {
     left: -115px;
-    opacity: .3;
+    opacity: 0.3;
   }
 
-  .h1, .h4 {
+  .h1,
+  .h4 {
     margin: 0 !important;
   }
 }
@@ -17,6 +18,6 @@
   position: absolute;
   left: -125px;
   top: 50%;
-  transform: translateY(-50%) rotate(-90deg) scale(.8);;
-  transition: all .2s linear;
+  transform: translateY(-50%) rotate(-90deg) scale(0.8);
+  transition: all 0.2s linear;
 }

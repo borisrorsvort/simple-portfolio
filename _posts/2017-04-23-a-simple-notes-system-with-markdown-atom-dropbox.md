@@ -4,6 +4,7 @@ date: 2017-04-22 12:11
 categories:
 - blog
 comments: true
+layout: post
 ---
 
 

@@ -1,8 +1,10 @@
 ---
-categories:
-- blog
 title: You probably don’t need an automatic admin framework
 date: 2018-02-11 16:12:06 +0000
+categories:
+- blog
+layout: post
+comments: true
 ---
 Automatic admin framework (like rails_admin, active_admin,…), or admin template (like Inspina, Forest admin,…) have been on the market for quite some time, and are still very popular. Whereas it can give the impression to get something running quickly without development time, it is at the expense of things often mistakenly deemed less important.
 

@@ -1,9 +1,19 @@
+.project__thumbnail {
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 5px;
+  img {
+    border-radius: 5px;
+  }
+}
+
 @media (min-width: 52em) {
   .project__thumbnail {
     position: relative;
+    height: 390px;
     right: 0;
-    max-width: 200px;
-    overflow: visible;
+    width: 700px;
+    margin-right: -350px;
     img {
       max-width: none;
     }
