@@ -13,4 +13,5 @@ fields:
     maxSize: 250
   label: Thumbnail
 pages:
+- _projects/Stratégie - Plainte - Traitements application.md
 - _projects/dataviz.md
