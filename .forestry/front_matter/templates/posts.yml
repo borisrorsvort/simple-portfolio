@@ -1,7 +1,5 @@
 ---
-pages:
-- _posts/redux-collection-data-structure-patterns.md
-- _posts/2018-02-11-you-probably-don-t-need-an-automatic-admin-framework.md
+label: posts
 hide_body: false
 fields:
 - name: categories
@@ -10,3 +8,5 @@ fields:
   hidden: false
   default:
   - blog
+pages:
+- _posts/2018-02-11-you-probably-don-t-need-an-automatic-admin-framework.md

@@ -1,4 +1,5 @@
 ---
+label: projects
 hide_body: false
 fields:
 - name: categories
@@ -11,3 +12,5 @@ fields:
   type: text
   hidden: false
   default: ''
+pages:
+- _projects/dataviz.md
