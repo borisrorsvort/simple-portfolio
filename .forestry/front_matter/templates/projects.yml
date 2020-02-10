@@ -13,5 +13,6 @@ fields:
     maxSize: 250
   label: Thumbnail
 pages:
+- _projects/Hesabu.md
 - _projects/Stratégie - Plainte - Traitements application.md
 - _projects/dataviz.md
