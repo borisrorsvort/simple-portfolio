@@ -7,4 +7,5 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem 'jekyll-postcss'
   gem 'jekyll-autoprefixer'
+  gem 'jekyll-admin'
 end

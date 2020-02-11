@@ -1,7 +1,7 @@
 ---
 title: Emuzikos
 date: '2016-12-22 00:00:00'
-thumbnail: assets/images/emuzikos.png
+image: assets/images/emuzikos.png
 href: 'http://emuzikos.com'
 categories:
 - code

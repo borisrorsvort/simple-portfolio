@@ -2,7 +2,7 @@
 title: Roomorama
 date: '2016-12-22 00:00:00'
 href: 'http://roomorama.com'
-thumbnail: assets/images/roomorama.png
+image: assets/images/roomorama.png
 layout: page
 categories:
 - code

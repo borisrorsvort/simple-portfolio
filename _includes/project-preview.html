@@ -15,10 +15,10 @@
       categories=include.project.categories %}
     </p>
 
-    {% if include.project.thumbnail.size > 0 %}
+    {% if include.project.image.size > 0 %}
     <div class="project__thumbnail">
       <img
-        src="{{ include.project.thumbnail | prepend: site.baseurl }}"
+        src="{{ include.project.image | prepend: site.baseurl }}"
         alt="{{include.project.title | append: ' thubnail'}}"
       />
     </div>

@@ -2,7 +2,7 @@
 title: Ruby Belgium
 date: '2016-12-22 00:00:00'
 href: http://rubybelgium.be
-thumbnail: assets/images/rubybelgium.png
+image: assets/images/rubybelgium.png
 categories:
 - code
 - design

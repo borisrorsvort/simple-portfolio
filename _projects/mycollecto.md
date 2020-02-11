@@ -2,7 +2,7 @@
 title: MyCollecto
 date: 2016-12-22 00:00:00
 href: http://mycollecto.be
-thumbnail: assets/images/mycollecto.png
+image: assets/images/mycollecto.png
 categories:
 - code
 - design

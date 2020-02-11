@@ -2,7 +2,7 @@
 title: MyMicroInvest
 date: 2016-12-23 00:00:00 +0000
 href: http://mymicroinvest.com
-thumbnail: assets/images/mymicroinvest.png
+image: assets/images/mymicroinvest.png
 categories:
 - code
 - design
