@@ -1,4 +1,60 @@
-// Text colors
+/* Basscss Colors */
+
+.black {
+  color: $black;
+}
+
+.gray {
+  color: $gray;
+}
+
+.white {
+  color: $white;
+}
+
+.blue {
+  color: $blue;
+}
+
+.green {
+  color: $green;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.red {
+  color: $red;
+}
+
+.color-inherit {
+  color: inherit;
+}
+
+.muted {
+  opacity: 0.5;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+.bg-red {
+  background-color: $red;
+}
 
 .brown {
   color: $brown;

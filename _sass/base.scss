@@ -4,11 +4,10 @@
 
 html {
   font-size: 21px;
-  // line-height: 30px;
 }
 
 body {
-  font-family: 'Open sans', sans-serif;
+  font-family: "Open sans", sans-serif;
   font-size: 1em;
   line-height: 1.5;
   margin: auto;
@@ -20,22 +19,32 @@ img {
   max-width: 100%;
 }
 
-p, ul, ol, pre, table, blockquote {
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
   margin-top: 0em;
   margin-bottom: 1.42857143em;
 }
-ul ul, ol ol, ul ol, ol ul {
+ul ul,
+ol ol,
+ul ol,
+ol ul {
   margin-top: 0em;
   margin-bottom: 0em;
 }
 
 /* Let's make sure all's aligned */
-hr, .hr {
+hr,
+.hr {
   border: 1px solid;
   margin: -1px 0;
 }
 
-sub, sup {
+sub,
+sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;

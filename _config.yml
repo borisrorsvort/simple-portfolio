@@ -39,4 +39,4 @@ sass:
   style: compressed
 
 # Gems
-plugins: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]
+plugins: [jekyll-paginate, jekyll-sitemap, jekyll-autoprefixer]

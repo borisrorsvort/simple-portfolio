@@ -1,16 +1,18 @@
-$red: #FC4A4E;
-$blue: #009ACA;
-$yellow: #FDBC40;
-$green: #35CA4A;
+$red: #fc4a4e;
+$blue: #009aca;
+$yellow: #fdbc40;
+$green: #35ca4a;
 $green: #3bb84c;
 $dark-yellow: darken($yellow, 20%);
 $brown: darken($dark-yellow, 20%);
 $maroon: #85144b;
-
+$black: #000;
+$gray: #333;
+$white: #fff;
 
 $h1: 4.23809524em !default;
 $h2: 1.5rem !default;
 $h3: 1.25rem !default;
 $h4: 1rem !default;
-$h5: .875rem !default;
-$h6: .75rem !default;
+$h5: 0.875rem !default;
+$h6: 0.75rem !default;
