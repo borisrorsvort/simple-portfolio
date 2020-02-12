@@ -21,6 +21,11 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+- name: url
+  type: text
+  config:
+    required: false
+  label: Url
 pages:
 - _projects/Bluesquare brand identity.md
 - _projects/Hesabu.md
