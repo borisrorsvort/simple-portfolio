@@ -27,7 +27,7 @@ defaults:
       type: projects
     values:
       categories: []
-      thumbnail: ""
+      image: ""
   - scope:
       type: posts
     values:
