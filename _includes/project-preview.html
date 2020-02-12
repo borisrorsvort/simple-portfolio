@@ -1,4 +1,4 @@
-<article class="mb2 md-flex">
+<article class="mb4 md-flex">
   <div class="project__body md-mr3">
     <header>
       <h3>{{ include.project.title }}</h3>
@@ -16,7 +16,7 @@
     </p>
 
     {% if include.project.image.size > 0 %}
-    <div class="project__thumbnail">
+    <div class="project__thumbnail pt2">
       <img
         src="{{ include.project.image | prepend: site.baseurl }}"
         alt="{{include.project.title | append: ' thubnail'}}"

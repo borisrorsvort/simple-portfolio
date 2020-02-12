@@ -7,6 +7,9 @@ layout: default
 <article class="container">
   {{ content }} {% if page.category %}
   <div class="col-12 px2 md-col-8 mx-auto">
+    <header class="mb2">
+      <h2>Latest work</h2>
+    </header>
     {% assign projects = site.projects | where_exp: "project",
     "project.categories contains page.category" %} {% for project in projects %}
     {% include project-preview.html project=project %} {% endfor %}
