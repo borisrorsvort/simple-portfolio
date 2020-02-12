@@ -12,6 +12,15 @@ fields:
   config:
     maxSize: 250
   label: Image
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
 pages:
 - _projects/Bluesquare brand identity.md
 - _projects/Hesabu.md
