@@ -1,6 +1,6 @@
 ---
 title: Emuzikos
-date: 2016-12-22 00:00:00
+date: 2012-08-01 01:00:00 +0200
 image: "/assets/images/Capture d’écran 2020-02-13 à 16.43.02.png"
 href: http://emuzikos.com
 categories:
