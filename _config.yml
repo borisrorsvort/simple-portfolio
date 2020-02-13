@@ -6,8 +6,8 @@ paginate_path: "/blog/page-:num"
 google_analytics: UA-2826331-18
 
 # SEO settings
-title: Boris Rorsvort — Ux Designer and full stack Rails / Js developper
-description: Web applications, team processes & teach code. Startup McGyver based in Brussels, Belgium
+title: Boris Rorsvort — Designer, development and product management
+description: Web applications, team processes & teaching code. Startup McGyver based in Brussels, Belgium
 url: https://www.rorsvort.com
 twitter_username: borisrorsvort
 
