@@ -11,8 +11,9 @@ layout: default
       <h2>Latest work</h2>
     </header>
     {% assign projects = site.projects | where_exp: "project",
-    "project.categories contains page.category" %} {% for project in projects %}
-    {% include project-preview.html project=project %} {% endfor %}
+    "project.categories contains page.category" | sort: "date" | reverse %} {%
+    for project in projects %} {% include project-preview.html project=project
+    %} {% endfor %}
   </div>
   {% endif %}
   <div class="center py4">
