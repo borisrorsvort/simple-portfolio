@@ -4,7 +4,7 @@ categories:
 - code
 - management
 image: "/assets/images/Dataviz-portal-01.png"
-date: 
+date: 2018-04-10 00:00:00 +0200
 url: https://www.fbp-rdc.org/data
 
 ---
