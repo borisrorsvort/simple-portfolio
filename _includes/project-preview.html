@@ -1,14 +1,12 @@
 <article class="mb4 md-flex">
   <div class="project__body md-mr3">
     <header>
-      <h3>{{ include.project.title }}</h3>
-      {% if include.project.href %}
-      <a
-        href="{{include.project.href}}"
-        class="project__link white block py2 mb1"
-        >{{include.project.href}}</a
-      >
-      {% endif %}
+      <h3>
+        <small class="project__link white block muted mb1"
+          >{{ include.project.date | date: '%Y' }}</small
+        >
+        {{ include.project.title }}
+      </h3>
     </header>
     <p>
       {{include.project.content}} {% include categories-list.html
