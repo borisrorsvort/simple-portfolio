@@ -6,7 +6,7 @@ categories:
 layout: post
 comments: true
 ---
-![]({{ site.baseurl }}/assets/images/Screenshot%202017-01-04%2017.12.04.png)
+![]({{ site.baseurl }}/assets/images/select2-sketch-freebie.png)
 
 As I needed for myself I thought I would share to the community. So here you go: The select2 sketch freebie.
 

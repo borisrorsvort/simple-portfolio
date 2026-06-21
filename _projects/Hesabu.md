@@ -3,7 +3,7 @@ categories:
 - design
 - code
 - management
-image: "/assets/images/Hesabu screencast.gif"
+image: "/assets/images/hesabu.gif"
 date: 2019-09-01 00:00:00 +0200
 url: ''
 
