@@ -8,6 +8,8 @@
   {% assign classes = 'btn pill gray uppercase py0 px1' %}
 {% endif %}
 
-<a href="{{cat}}" class="{{classes}}">
-  {{cat}}
-</a>
+{% if cat == 'management' %}
+  <span class="{{classes}}">{{cat}}</span>
+{% else %}
+  <a href="{{cat}}" class="{{classes}}">{{cat}}</a>
+{% endif %}
