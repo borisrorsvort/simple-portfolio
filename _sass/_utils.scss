@@ -8,7 +8,9 @@
 
 @media (min-width: 52em) {
   .columize {
-    column-count: 2;
-    column-gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
   }
 }
