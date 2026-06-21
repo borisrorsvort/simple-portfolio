@@ -3,8 +3,8 @@ $blue: #009aca;
 $yellow: #fdbc40;
 $green: #35ca4a;
 $green: #3bb84c;
-$dark-yellow: darken($yellow, 20%);
-$brown: darken($dark-yellow, 20%);
+$dark-yellow: #d58d02; // darken(#fdbc40, 20%)
+$brown: #704a01;       // darken($dark-yellow, 20%)
 $maroon: #85144b;
 $black: #000;
 $gray: #333;

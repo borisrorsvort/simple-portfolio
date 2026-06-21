@@ -14,39 +14,39 @@ layout: home
       <br>
       I’m a <strong>startup McGyver</strong> based in <strong>Brussels, Belgium</strong>.</p>
   </header>
-  <aside class="container categories-nav">
+  <nav aria-label="Categories" class="container categories-nav">
     <div class="clearfix flex">
-      <a href={{"design"}} class="categories-nav__item bg-red block center white p4 flex-auto col-12 md-col-6">
-        <img src="{{ '/assets/images/circle.svg' | prepend: site.baseurl }}" alt="" class="categories-nav__item__icon">
+      <a href="{{ '/design' | prepend: site.baseurl }}" class="categories-nav__item bg-red block center white p4 flex-auto col-12 md-col-6">
+        <img src="{{ '/assets/images/circle.svg' | prepend: site.baseurl }}" alt="" aria-hidden="true" class="categories-nav__item__icon">
         <div class="sm-h2 lg-h1 bold uppercase">
           Design
         </div>
         <small class="h4">
-          User experience & interfaces
+          User experience &amp; interfaces
         </small>
       </a>
-      <a href={{"code"}} class="categories-nav__item bg-yellow block center white p4 flex-auto col-12 md-col-6">
-        <img src="{{ '/assets/images/square.svg' | prepend: site.baseurl }}" alt="" class="categories-nav__item__icon">
+      <a href="{{ '/code' | prepend: site.baseurl }}" class="categories-nav__item bg-yellow block center white p4 flex-auto col-12 md-col-6">
+        <img src="{{ '/assets/images/square.svg' | prepend: site.baseurl }}" alt="" aria-hidden="true" class="categories-nav__item__icon">
         <div class="sm-h2 lg-h1 bold uppercase">
           Code
         </div>
         <small class="h4">
-          Custom development, speciallized in frontend
+          Custom development, specialized in frontend
         </small>
       </a>
     </div>
     <div class="clearfix flex">
-      <a href={{"teaching"}} class="categories-nav__item bg-blue block center white p4 flex-auto col-12 md-col-6">
-        <img src="{{ '/assets/images/triangle.svg' | prepend: site.baseurl }}" alt="" class="categories-nav__item__icon">
+      <a href="{{ '/teaching' | prepend: site.baseurl }}" class="categories-nav__item bg-blue block center white p4 flex-auto col-12 md-col-6">
+        <img src="{{ '/assets/images/triangle.svg' | prepend: site.baseurl }}" alt="" aria-hidden="true" class="categories-nav__item__icon">
         <div class="sm-h2 lg-h1 bold uppercase">
           Teaching
         </div>
         <small class="h4">
-          Code, Art & Culture
+          Code, Art &amp; Culture
         </small>
       </a>
-      <a href={{"articles"}} class="categories-nav__item bg-green block center white p4 flex-auto col-12 md-col-6">
-        <img src="{{ '/assets/images/hexagone.svg' | prepend: site.baseurl }}" alt="" class="categories-nav__item__icon">
+      <a href="{{ '/articles' | prepend: site.baseurl }}" class="categories-nav__item bg-green block center white p4 flex-auto col-12 md-col-6">
+        <img src="{{ '/assets/images/hexagone.svg' | prepend: site.baseurl }}" alt="" aria-hidden="true" class="categories-nav__item__icon">
         <div class="sm-h2 lg-h1 bold uppercase">
           Blog
         </div>
@@ -55,5 +55,5 @@ layout: home
         </small>
       </a>
     </div>
-  </aside>
+  </nav>
 </div>

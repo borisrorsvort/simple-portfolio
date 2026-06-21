@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   {% include head.html %}
 
   <body class="bg-{{ page.background }} {{ page.color }} animated fadeIn">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     {{ content }}
 
     <footer class="center p2">
@@ -12,16 +13,19 @@
       <a
         href="{{ site.twitter_username | prepend: 'https://twitter.com/' }}"
         class="inline-block mr2 btn h6 py0 px1"
+        rel="noopener noreferrer"
         >Twitter</a
       >
       <a
         href="{{ site.twitter_username | prepend: 'https://github.com/' }}"
         class="inline-block btn h6 py0 px1"
+        rel="noopener noreferrer"
         >Github</a
       >
       <a
         href="https://www.linkedin.com/in/borisrorsvort"
         class="inline-block btn h6 py0 px1"
+        rel="noopener noreferrer"
         >Linked in</a
       >
     </footer>

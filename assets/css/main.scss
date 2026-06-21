@@ -1,7 +1,19 @@
 ---
 ---
 
-@import "variables", "type-scale", "base", "btn", "btn-primary",
-  "responsive-margin", "responsive-padding", "colors", "utils", "grid",
-  "fontello", "fontello-codes", "components/categories-nav",
-  "components/animations", "components/project-thumbnail", "components/pill";
+@use "variables" as *;
+@use "type-scale" as *;
+@use "base" as *;
+@use "btn" as *;
+@use "btn-primary" as *;
+@use "responsive-margin" as *;
+@use "responsive-padding" as *;
+@use "colors" as *;
+@use "utils" as *;
+@use "grid" as *;
+@use "fontello" as *;
+@use "fontello-codes" as *;
+@use "components/categories-nav" as *;
+@use "components/animations" as *;
+@use "components/project-thumbnail" as *;
+@use "components/pill" as *;

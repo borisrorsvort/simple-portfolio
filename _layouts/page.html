@@ -4,23 +4,26 @@ layout: default
 
 {% include nav.html %}
 
-<article class="container">
-  {{ content }} {% if page.category %}
-  <div class="col-12 px2 md-col-8 mx-auto">
-    <header class="mb2">
-      <h2>Latest work</h2>
-    </header>
-    {% assign projects = site.projects | where_exp: "project",
-    "project.categories contains page.category" | sort: "date" | reverse %} {%
-    for project in projects %} {% include project-preview.html project=project
-    %} {% endfor %}
-  </div>
-  {% endif %}
-  <div class="center py4">
-    <a
-      href="http://dribbble.com/borisrorsvort"
-      class="btn btn-primary gray muted"
-      >View more work on dribbble</a
-    >
-  </div>
-</article>
+<main id="main-content">
+  <article class="container">
+    {{ content }} {% if page.category %}
+    <div class="col-12 px2 md-col-8 mx-auto">
+      <header class="mb2">
+        <h2>Latest work</h2>
+      </header>
+      {% assign projects = site.projects | where_exp: "project",
+      "project.categories contains page.category" | sort: "date" | reverse %} {%
+      for project in projects %} {% include project-preview.html project=project
+      %} {% endfor %}
+    </div>
+    {% endif %}
+    <div class="center py4">
+      <a
+        href="http://dribbble.com/borisrorsvort"
+        class="btn btn-primary gray muted"
+        rel="noopener noreferrer"
+        >View more work on dribbble</a
+      >
+    </div>
+  </article>
+</main>
