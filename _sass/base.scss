@@ -94,7 +94,7 @@ nav[aria-label="Main navigation"] {
   -webkit-backdrop-filter: blur(12px);
 
   .btn {
-    color: rgba(26, 23, 9, 0.55);
+    color: rgba(26, 23, 9, 0.75);
     font-weight: 500;
     letter-spacing: 0.06em;
     font-size: 0.75rem;
@@ -124,9 +124,11 @@ body.bg-green {
     background-color: transparent;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    animation: nav-scroll-color linear both;
-    animation-timeline: scroll(root);
-    animation-range: 60px 120px;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: nav-scroll-color linear both;
+      animation-timeline: scroll(root);
+      animation-range: 60px 120px;
+    }
 
     .btn {
       color: rgba(255, 255, 255, 0.75);

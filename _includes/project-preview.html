@@ -2,7 +2,7 @@
   <div class="project__body md-mr3">
     <header>
       <h3>
-        <small class="project__link white block muted mb1">{% if include.project.start_date %}{{ include.project.start_date | date: '%Y' }} — {{ include.project.date | date: '%Y' }}{% else %}{{ include.project.date | date: '%Y' }}{% endif %}</small>
+        <small class="project__link block muted mb1">{% if include.project.start_date %}{{ include.project.start_date | date: '%Y' }} — {{ include.project.date | date: '%Y' }}{% else %}{{ include.project.date | date: '%Y' }}{% endif %}</small>
         {{ include.project.title }}
       </h3>
     </header>

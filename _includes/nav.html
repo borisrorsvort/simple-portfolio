@@ -2,11 +2,11 @@
 <nav aria-label="Main navigation">
   <ul class="list-reset center uppercase p2">
     <li class="inline">
-      <a href="{{ site.baseurl | append: '/' }}" class="btn light">Home</a>
+      <a href="{{ site.baseurl | append: '/' }}" class="btn light" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
     </li>
     {% for p in pages %}
       <li class="inline">
-        <a class="btn light {%if p.url == page.url %}muted{% endif %}" href="{{ p.url | prepend: site.baseurl }}">
+        <a class="btn light {%if p.url == page.url %}muted{% endif %}" href="{{ p.url | prepend: site.baseurl }}" {% if p.url == page.url %}aria-current="page"{% endif %}>
           {{ p.title }}
         </a>
       </li>

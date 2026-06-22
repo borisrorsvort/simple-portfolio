@@ -62,3 +62,10 @@
   animation-fill-mode: both;  -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animated {
+    animation: none !important;
+    transition: none !important;
+  }
+}
