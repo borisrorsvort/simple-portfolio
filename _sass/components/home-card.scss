@@ -22,7 +22,7 @@
   &__header {
     position: relative;
     height: 140px;
-    background: linear-gradient(160deg, #e8a020 0%, #e55c52 40%, #2d9db0 75%, #3cb86e 100%);
+    background: linear-gradient(160deg, #e5e1db 0%, #d8d5cf 100%);
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -31,10 +31,10 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130' viewBox='0 0 130 130'%3E%3Ccircle cx='0' cy='0' r='30' fill='none' stroke='white' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='0' r='30' fill='none' stroke='white' stroke-width='1.5'/%3E%3Ccircle cx='0' cy='130' r='30' fill='none' stroke='white' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='130' r='30' fill='none' stroke='white' stroke-width='1.5'/%3E%3Ccircle cx='86' cy='35' r='5' fill='white'/%3E%3Crect x='29' y='82' width='13' height='13' fill='white' transform='rotate(22 35 88)'/%3E%3Cpolygon points='52,46 62,30 72,46' fill='white'/%3E%3Cpolygon points='96,104 108,97 108,83 96,76 84,83 84,97' fill='none' stroke='white' stroke-width='1.3'/%3E%3Cpolygon points='0,96 20,68 40,96' fill='none' stroke='white' stroke-width='1.3'/%3E%3Cpolygon points='130,96 110,68 90,96' fill='none' stroke='white' stroke-width='1.3'/%3E%3C/svg%3E");
-      background-size: 130px 130px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M -20,40 A 20,20 0 0,1 20,40' fill='none' stroke='%23908c87' stroke-width='1'/%3E%3Cpath d='M -14,40 A 14,14 0 0,1 14,40' fill='none' stroke='%23908c87' stroke-width='0.6'/%3E%3Cpath d='M -8,40 A 8,8 0 0,1 8,40' fill='none' stroke='%23908c87' stroke-width='0.4'/%3E%3Cpath d='M 20,40 A 20,20 0 0,1 60,40' fill='none' stroke='%23908c87' stroke-width='1'/%3E%3Cpath d='M 26,40 A 14,14 0 0,1 54,40' fill='none' stroke='%23908c87' stroke-width='0.6'/%3E%3Cpath d='M 32,40 A 8,8 0 0,1 48,40' fill='none' stroke='%23908c87' stroke-width='0.4'/%3E%3Cpath d='M 0,20 A 20,20 0 0,1 40,20' fill='none' stroke='%23908c87' stroke-width='1'/%3E%3Cpath d='M 6,20 A 14,14 0 0,1 34,20' fill='none' stroke='%23908c87' stroke-width='0.6'/%3E%3Cpath d='M 12,20 A 8,8 0 0,1 28,20' fill='none' stroke='%23908c87' stroke-width='0.4'/%3E%3C/svg%3E");
+      background-size: 40px 40px;
       background-repeat: repeat;
-      opacity: 0.22;
+      opacity: 0.4;
       pointer-events: none;
     }
   }
