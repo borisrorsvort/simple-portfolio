@@ -3,16 +3,21 @@ layout: home
 ---
 
 <div class="relative">
-  <header class="center mx-auto p3 md-p4">
-    <h1 class=" h2 lg-h1 lg-m0">
-      Boris Rorsvort
-    </h1>
-    <h2 class="h4 lg-h2 light m0">
-      <strong>Design, development & product management</strong>.
-    </h2>
-    <p>I build apps, team processes & teach web design.
-      <br>
-      I’m a <strong>startup McGyver</strong> based in <strong>Brussels, Belgium</strong>.</p>
+  <header class="profile-card mx-auto px3 py4">
+    <div class="profile-card__photo">
+      <img
+        src="{{ '/assets/images/boris-profile.jpg' | prepend: site.baseurl }}"
+        alt="Boris Rorsvort"
+        width="100"
+        height="100"
+      />
+    </div>
+    <div class="profile-card__body">
+      <h1 class="m0">Boris Rorsvort</h1>
+      <p class="profile-card__tagline">Design, development &amp; product management</p>
+      <p class="profile-card__bio">I build apps, team processes &amp; teach web design.
+        Startup McGyver based in <strong>Brussels, Belgium</strong>.</p>
+    </div>
   </header>
   <nav aria-label="Categories" class="container categories-nav">
     <div class="clearfix md-flex">
@@ -31,7 +36,7 @@ layout: home
           Code
         </div>
         <small class="h4">
-          Full-stack Rails development & APIs
+          Full-stack Rails development &amp; APIs
         </small>
       </a>
     </div>

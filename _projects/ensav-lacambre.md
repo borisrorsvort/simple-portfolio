@@ -1,6 +1,7 @@
 ---
 title: 'Web − Art − Culture @ ENSAV La Cambre'
-date: '2016-12-22 00:00:00'
+date: '2023-09-01 00:00:00'
+start_date: '2015-02-01 00:00:00'
 categories:
 - teaching
 ---

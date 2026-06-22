@@ -1,0 +1,51 @@
+@use "variables" as *;
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 680px;
+
+  @media (max-width: 52em) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__photo {
+    flex-shrink: 0;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid $border-subtle;
+      display: block;
+    }
+  }
+
+  &__body {
+    flex: 1;
+
+    h1 {
+      font-size: 2rem;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &__tagline {
+    color: rgba(240, 237, 230, 0.55);
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 0.2rem 0 0.5rem;
+  }
+
+  &__bio {
+    color: rgba(240, 237, 230, 0.45);
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+}
