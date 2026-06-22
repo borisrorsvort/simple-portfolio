@@ -44,7 +44,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   background-color: $bg-dark;
-  color: #f0ede6;
+  color: #1a1709;
 }
 
 img {
@@ -89,37 +89,68 @@ nav[aria-label="Main navigation"] {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: rgba(13, 13, 13, 0.88);
+  background-color: rgba(248, 246, 241, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
   .btn {
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(26, 23, 9, 0.55);
     font-weight: 500;
     letter-spacing: 0.06em;
     font-size: 0.75rem;
 
     &:hover {
-      color: #fff;
+      color: #1a1709;
     }
   }
 
   .muted {
     opacity: 1;
-    color: rgba(255, 255, 255, 0.28);
+    color: rgba(26, 23, 9, 0.28);
   }
+}
+
+// Category pages: transparent nav → category color on scroll (CSS scroll-driven)
+body.bg-red    { --nav-scroll-color: #{$red}; }
+body.bg-yellow { --nav-scroll-color: #{$yellow}; }
+body.bg-blue   { --nav-scroll-color: #{$blue}; }
+body.bg-green  { --nav-scroll-color: #{$green}; }
+
+body.bg-red,
+body.bg-yellow,
+body.bg-blue,
+body.bg-green {
+  nav[aria-label="Main navigation"] {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    animation: nav-scroll-color linear both;
+    animation-timeline: scroll(root);
+    animation-range: 60px 120px;
+
+    .btn {
+      color: rgba(255, 255, 255, 0.75);
+      &:hover { color: #fff; }
+    }
+
+    .muted { color: rgba(255, 255, 255, 0.35); }
+  }
+}
+
+@keyframes nav-scroll-color {
+  from { background-color: transparent; }
+  to   { background-color: var(--nav-scroll-color); }
 }
 
 // Footer
 .site-footer {
-  border-top: 1px solid $border-subtle;
-  color: $text-muted;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 
   .btn {
-    color: $text-muted;
+    color: rgba(255, 255, 255, 0.6);
 
     &:hover {
-      color: #f0ede6;
+      color: #fff;
     }
   }
 }

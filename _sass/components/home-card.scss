@@ -1,0 +1,176 @@
+@use "variables" as *;
+
+.home-card-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: $bg-dark;
+}
+
+.hcard {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 24px;
+  background: $surface-1;
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.10),
+    0 0 0 1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+
+  &__header {
+    position: relative;
+    height: 140px;
+    background: linear-gradient(160deg, #e8a020 0%, #e55c52 40%, #2d9db0 75%, #3cb86e 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130' viewBox='0 0 130 130'%3E%3Ccircle cx='0' cy='0' r='30' fill='none' stroke='white' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='0' r='30' fill='none' stroke='white' stroke-width='1.5'/%3E%3Ccircle cx='0' cy='130' r='30' fill='none' stroke='white' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='130' r='30' fill='none' stroke='white' stroke-width='1.5'/%3E%3Ccircle cx='86' cy='35' r='5' fill='white'/%3E%3Crect x='29' y='82' width='13' height='13' fill='white' transform='rotate(22 35 88)'/%3E%3Cpolygon points='52,46 62,30 72,46' fill='white'/%3E%3Cpolygon points='96,104 108,97 108,83 96,76 84,83 84,97' fill='none' stroke='white' stroke-width='1.3'/%3E%3Cpolygon points='0,96 20,68 40,96' fill='none' stroke='white' stroke-width='1.3'/%3E%3Cpolygon points='130,96 110,68 90,96' fill='none' stroke='white' stroke-width='1.3'/%3E%3C/svg%3E");
+      background-size: 130px 130px;
+      background-repeat: repeat;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    bottom: -44px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    img {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid $surface-1;
+      display: block;
+    }
+  }
+
+  &__body {
+    padding: 3.5rem 1.75rem 1.75rem;
+    text-align: center;
+  }
+
+  &__name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #1a1709;
+    margin: 0 0 0.3rem;
+  }
+
+  &__tagline {
+    font-size: 0.72rem;
+    color: rgba(26, 23, 9, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 0.75rem;
+  }
+
+  &__bio {
+    font-size: 0.8rem;
+    color: rgba(26, 23, 9, 0.55);
+    line-height: 1.6;
+    margin: 0 0 1.5rem;
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    text-align: left;
+  }
+
+  &__cat {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    padding: 0.8rem 0.75rem;
+    border-radius: 12px;
+    background: $surface-2;
+    border-top: 2px solid transparent;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #e8e5de;
+
+      .hcard__cat-shape {
+        opacity: 0.28;
+        transform: rotate(10deg) scale(1.05);
+      }
+    }
+
+    &--red    { border-top-color: $red; }
+    &--yellow { border-top-color: $yellow; }
+    &--blue   { border-top-color: $blue; }
+    &--green  { border-top-color: $green; }
+  }
+
+  &__cat-shape {
+    position: absolute;
+    bottom: -8px;
+    right: -20px;
+    width: 90px;
+    height: auto;
+    opacity: 0.18;
+    filter: invert(1);
+    transform: rotate(10deg);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+  }
+
+  &__cat-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #1a1709;
+    margin-bottom: 0.2rem;
+  }
+
+  &__cat-desc {
+    display: block;
+    font-size: 0.65rem;
+    color: rgba(26, 23, 9, 0.45);
+    line-height: 1.3;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid $border-subtle;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: $surface-2;
+    color: rgba(26, 23, 9, 0.45);
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background: #e0ddd6;
+      color: #1a1709;
+    }
+  }
+}

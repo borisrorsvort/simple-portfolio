@@ -6,6 +6,7 @@
   position: relative;
   overflow: hidden;
   border-top: 3px solid transparent;
+  color: #1a1709;
 
   &.bg-red    { background-color: $surface-1; border-top-color: $red; }
   &.bg-yellow { background-color: $surface-1; border-top-color: $yellow; }
