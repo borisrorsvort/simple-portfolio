@@ -65,3 +65,9 @@
 .dark-yellow {
   color: $dark-yellow;
 }
+
+// Section page body backgrounds — dark with subtle color tint
+body.bg-red    { background-color: #130908; }
+body.bg-yellow { background-color: #12100a; }
+body.bg-blue   { background-color: #060c12; }
+body.bg-green  { background-color: #060f09; }

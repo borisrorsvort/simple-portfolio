@@ -1,11 +1,29 @@
+@use "variables" as *;
+
 .categories-nav__item {
   text-decoration: none;
-  transition: all 0.1s linear;
+  transition: background-color 0.2s ease;
   position: relative;
   overflow: hidden;
-  &:hover .categories-nav__item__icon {
-    left: -115px;
-    opacity: 0.3;
+  border-top: 3px solid transparent;
+
+  &.bg-red    { background-color: $surface-1; border-top-color: $red; }
+  &.bg-yellow { background-color: $surface-1; border-top-color: $yellow; }
+  &.bg-blue   { background-color: $surface-1; border-top-color: $blue; }
+  &.bg-green  { background-color: $surface-1; border-top-color: $green; }
+
+  &:hover {
+    &.bg-red,
+    &.bg-yellow,
+    &.bg-blue,
+    &.bg-green {
+      background-color: $surface-2;
+    }
+
+    .categories-nav__item__icon {
+      left: -115px;
+      opacity: 0.18;
+    }
   }
 
   .h1,
@@ -19,5 +37,6 @@
   left: -125px;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg) scale(0.8);
-  transition: all 0.2s linear;
+  transition: all 0.2s ease;
+  opacity: 0.1;
 }

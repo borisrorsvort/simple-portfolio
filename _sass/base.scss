@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 * {
   box-sizing: border-box;
 }
@@ -31,16 +33,18 @@
 }
 
 html {
-  font-size: 21px;
+  font-size: 19px;
 }
 
 body {
-  font-family: "Open sans", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: auto;
-  font-weight: 300;
+  font-weight: 400;
   overflow-x: hidden;
+  background-color: $bg-dark;
+  color: #f0ede6;
 }
 
 img {
@@ -53,21 +57,21 @@ ol,
 pre,
 table,
 blockquote {
-  margin-top: 0em;
+  margin-top: 0;
   margin-bottom: 1.42857143em;
 }
+
 ul ul,
 ol ol,
 ul ol,
 ol ul {
-  margin-top: 0em;
-  margin-bottom: 0em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-/* Let's make sure all's aligned */
 hr,
 .hr {
-  border: 1px solid;
+  border: 1px solid $border-subtle;
   margin: -1px 0;
 }
 
@@ -77,9 +81,46 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
-sup {
-  top: -0.5em;
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+// Sticky nav with backdrop blur
+nav[aria-label="Main navigation"] {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(13, 13, 13, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid $border-subtle;
+
+  .btn {
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    font-size: 0.75rem;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .muted {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.28);
+  }
 }
-sub {
-  bottom: -0.25em;
+
+// Footer
+.site-footer {
+  border-top: 1px solid $border-subtle;
+  color: $text-muted;
+
+  .btn {
+    color: $text-muted;
+
+    &:hover {
+      color: #f0ede6;
+    }
+  }
 }

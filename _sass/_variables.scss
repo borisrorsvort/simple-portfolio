@@ -1,18 +1,26 @@
-$red: #fc4a4e;
-$blue: #009aca;
-$yellow: #fdbc40;
-$green: #35ca4a;
-$green: #3bb84c;
-$dark-yellow: #d58d02; // darken(#fdbc40, 20%)
-$brown: #704a01;       // darken($dark-yellow, 20%)
+// Section identity colors — refined for dark backgrounds
+$red: #e55c52;
+$blue: #2d9db0;
+$yellow: #e8a020;
+$green: #3cb86e;
+$dark-yellow: #b87010;
+$brown: #704a01;
 $maroon: #85144b;
-$black: #000;
-$gray: #333;
+$black: #0d0d0d;
+$gray: #8a8680;
 $white: #fff;
 
-$h1: 4.23809524em !default;
-$h2: 1.5rem !default;
-$h3: 1.2rem !default;
-$h4: 1rem !default;
-$h5: 0.875rem !default;
+// Dark surface palette
+$bg-dark: #0d0d0d;
+$surface-1: #161616;
+$surface-2: #222222;
+$border-subtle: #2a2a2a;
+$text-muted: #8a8680;
+
+// Typography scale
+$h1: 5em !default;
+$h2: 2rem !default;
+$h3: 1.4rem !default;
+$h4: 1.1rem !default;
+$h5: 0.9rem !default;
 $h6: 0.75rem !default;
